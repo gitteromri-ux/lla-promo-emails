@@ -20,7 +20,7 @@
 
   /* HERO · cells only */
   .hero{position:relative;overflow:hidden;background:#050c1e}
-  .hero-bg{position:absolute;inset:0;background-image:url('../assets/hero/lp2-laptop-fullbleed.jpg');background-size:60% auto;background-position:right center;background-repeat:no-repeat;background-color:#050C22;opacity:1}
+  .hero-bg{position:absolute;inset:0;background-image:url('../assets/hero/lp2-laptop-fullbleed.jpg');background-size:auto 90%;background-position:right center;background-repeat:no-repeat;background-color:#050C22;opacity:1}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,30,.92) 0%,rgba(5,12,30,.7) 45%,rgba(5,12,30,.1) 80%,rgba(5,12,30,0) 100%)}
   .hero-inner{position:relative;max-width:1200px;margin:0 auto;padding:120px 24px 140px;min-height:640px;display:grid;grid-template-columns:1fr}
   .hero-copy{max-width:640px}
@@ -116,6 +116,7 @@
     .promo-price{font-size:22px}
     .redeem-inner{grid-template-columns:1fr;gap:32px}
     .redeem-big{font-size:88px}
+    .hero-bg{background-size:cover !important;background-position:center !important}
   }
 </style>
 </head>
