@@ -4,436 +4,347 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>The Longevity Blueprint · Longevity Life Academy</title>
-<meta name="description" content="A structured 18-week online course designed by eTeacher Group. Read your body's signals, build your personal protocol, live longer, stronger, better." />
+<meta name="description" content="Learn from top longevity experts. A structured 18-week live course by Longevity Life Academy. Free Abbott Lingo CGM included." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#050C22; --ink:#0B1533; --teal:#46E3C6; --teal2:#31C7AC;
-    --cream:#F5EFE6; --highlight:#DFF7F0; --muted:#B7C0D0;
-    --line:rgba(11,21,51,.10);
+    --page:#E9F5EE;         /* mint page bg (matches reference emails) */
+    --card:#FFFFFF;
+    --box:#F5F1EA;           /* warm gray details box */
+    --ink:#1A2836;
+    --muted:#5B6B7A;
+    --teal:#2AB8B0;
+    --teal-dark:#1F8F88;
+    --yellow:#FFF3A6;
+    --line:#DFD6C4;
+    --gold:#C86B1A;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{overflow-x:hidden}
   body{
-    font-family:'Hanken Grotesk',-apple-system,Segoe UI,Roboto,sans-serif;
-    color:var(--ink); background:#fff; line-height:1.55;
+    font-family:Georgia,'Cormorant Garamond',serif;
+    color:var(--ink); background:var(--page); line-height:1.6;
+    font-size:17px;
   }
-  .serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:-.005em}
+  .sans{font-family:'Hanken Grotesk',Arial,Helvetica,sans-serif}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
+  .yellow{background:var(--yellow);padding:1px 4px}
 
   /* Top bar */
   .topbar{
-    background:var(--navy); color:#fff;
+    background:#FFFFFF; border-bottom:1px solid var(--line);
     padding:14px 24px; display:flex; align-items:center; justify-content:space-between;
-    position:sticky; top:0; z-index:50;
   }
-  .topbar .logo img{height:32px}
-  .topbar .phone{font-size:14px; color:var(--muted)}
-  .topbar .phone b{color:#fff}
+  .topbar .logo img{height:34px}
+  .topbar .phone{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:14px;color:var(--muted)}
+  .topbar .phone a{color:var(--ink);font-weight:600}
 
-  /* HERO: full-bleed image with strong left gradient overlay (IIBS-style) */
+  /* HERO with laptop-zoom image */
   .hero{
-    position:relative; min-height:640px;
-    background:
-      linear-gradient(90deg, rgba(5,12,34,.94) 0%, rgba(5,12,34,.85) 38%, rgba(5,12,34,.55) 62%, rgba(5,12,34,.15) 100%),
-      url('../assets/images/woman-cards.jpg') center/cover no-repeat;
-    color:#fff;
-    display:flex; align-items:center;
+    background:var(--card);
+    border-bottom:1px solid var(--line);
   }
-  .hero-inner{
-    max-width:1200px; margin:0 auto; width:100%;
-    padding:80px 48px;
+  .hero-grid{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch;
   }
-  .hero-copy{max-width:560px}
-  .kicker{
-    display:inline-block; font-size:12px; letter-spacing:.16em; text-transform:uppercase;
-    color:var(--teal); font-weight:600; margin-bottom:18px;
-    border:1px solid rgba(70,227,198,.35); padding:6px 14px; border-radius:999px;
-  }
+  .hero-copy{padding:70px 48px 70px 48px; display:flex; flex-direction:column; justify-content:center}
   .hero h1{
     font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600; font-size:56px; line-height:1.05; margin:0 0 20px;
-    letter-spacing:-.01em;
+    font-weight:600; font-size:44px; line-height:1.12; margin:0 0 12px;
+    color:var(--ink);
+    letter-spacing:-.005em;
   }
-  .hero h1 em{color:var(--teal); font-style:normal}
-  .hero .lead{
-    font-size:18px; color:#E7ECF4; margin-bottom:28px; max-width:520px;
+  .hero h1 em{font-style:italic;color:var(--teal-dark)}
+  .hero .divider{
+    width:60px; height:6px; background:var(--teal); border-radius:3px;
+    margin:14px 0 22px 0;
   }
+  .hero p.lead{font-size:17px; line-height:1.6; color:var(--ink); max-width:520px; margin:0 0 22px 0}
+  .hero p.lead b{font-weight:700}
   .cta{
-    display:inline-block; background:var(--teal); color:var(--navy);
-    font-weight:700; font-size:16px; letter-spacing:.02em;
-    padding:16px 34px; border-radius:999px;
-    box-shadow:0 8px 24px rgba(70,227,198,.25);
+    display:inline-block; background:var(--teal); color:#FFF;
+    font-family:'Hanken Grotesk',Arial,sans-serif; font-weight:700; font-size:17px;
+    padding:14px 30px; border-radius:6px; letter-spacing:.2px;
+    transition:background .15s;
   }
-  .cta:hover{background:var(--teal2)}
-  .hero .meta{
-    margin-top:22px; font-size:14px; color:var(--muted);
-    display:flex; gap:22px; flex-wrap:wrap;
+  .cta:hover{background:var(--teal-dark)}
+  .hero-img{
+    background:#F5F1EA;
+    background-image:url('../assets/images/woman-cards.jpg');
+    background-size:cover; background-position:center;
+    min-height:500px;
   }
-  .hero .meta b{color:#fff; font-weight:600}
 
-  /* Trust strip */
+  /* Trust band under hero */
   .trust{
-    background:var(--navy); color:#fff;
-    border-top:1px solid rgba(255,255,255,.08);
+    background:var(--card); border-bottom:1px solid var(--line);
     padding:22px 24px;
   }
   .trust-inner{
-    max-width:1200px; margin:0 auto;
-    display:flex; align-items:center; justify-content:space-between;
-    gap:32px; flex-wrap:wrap;
+    max-width:1180px; margin:0 auto;
+    display:flex; align-items:center; justify-content:center; gap:36px;
+    font-family:'Hanken Grotesk',Arial,sans-serif; font-size:14px; color:var(--muted);
+    flex-wrap:wrap;
   }
-  .trust .rating{display:flex; align-items:center; gap:12px}
-  .trust .stars{color:#00B67A; letter-spacing:1px; font-size:16px}
-  .trust .rating b{font-size:16px}
-  .trust .rating span{color:var(--muted); font-size:14px}
-  .trust .stats{display:flex; gap:28px; flex-wrap:wrap}
-  .trust .stat{font-size:13px; color:var(--muted)}
-  .trust .stat b{display:block; color:#fff; font-size:20px; font-weight:700; line-height:1}
+  .trust b{color:var(--ink)}
+  .trust .stars{color:#F5A623; letter-spacing:1px}
 
-  /* Sections shared */
-  section{padding:80px 24px}
-  .wrap{max-width:1120px; margin:0 auto}
-  .eyebrow{
-    font-size:12px; letter-spacing:.18em; text-transform:uppercase;
-    color:var(--teal2); font-weight:700; margin-bottom:14px;
-  }
-  h2.big{
+  /* Sections */
+  section.band{padding:70px 24px;background:var(--page)}
+  section.band.white{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .wrap{max-width:1080px;margin:0 auto}
+  h2.title{
     font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600; font-size:42px; line-height:1.1; margin-bottom:16px;
-    color:var(--ink);
+    font-weight:600; font-size:38px; line-height:1.15; letter-spacing:-.005em;
+    margin:0 0 14px 0; color:var(--ink); text-align:center;
   }
-  .lead2{font-size:17px; color:#3A4560; max-width:720px; margin-bottom:36px}
+  h2.title em{font-style:italic;color:var(--teal-dark)}
+  p.sub{
+    text-align:center; max-width:720px; margin:0 auto 40px;
+    color:var(--muted); font-size:17px; line-height:1.6;
+  }
 
-  /* Six pillars grid */
-  .pillars-sec{background:var(--cream)}
-  .pillars{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
-  }
+  /* Pillars 3-col */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .pillar{
-    background:#fff; border:1px solid var(--line); border-radius:14px;
-    padding:26px; transition:transform .2s ease;
+    background:var(--card); padding:26px 24px; border:1px solid var(--line);
+    border-radius:6px;
   }
-  .pillar:hover{transform:translateY(-2px)}
-  .pillar .n{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-size:34px; font-weight:600; color:var(--teal2);
-    line-height:1; margin-bottom:8px;
+  .pillar .num{
+    font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--teal-dark);
+    font-weight:700; margin-bottom:6px;
   }
-  .pillar h3{font-size:18px; font-weight:700; margin:6px 0 8px; color:var(--ink)}
-  .pillar p{font-size:14.5px; color:#4A556D; line-height:1.55}
+  .pillar h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin:0 0 8px 0;color:var(--ink)}
+  .pillar p{font-size:15px;line-height:1.55;color:var(--muted);margin:0}
 
-  /* Curriculum */
-  .curriculum{background:#fff}
-  .phases{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:12px}
-  .phase{
-    border:1px solid var(--line); border-radius:12px; padding:22px;
-    background:linear-gradient(180deg,#fff, #FBFAF7);
+  /* CGM callout */
+  .cgm-callout{
+    background:var(--box); border:1px solid var(--line); border-radius:6px;
+    padding:32px; display:grid; grid-template-columns:1.2fr 1fr; gap:28px; align-items:center;
   }
-  .phase .pn{
-    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--teal2); font-weight:700; margin-bottom:8px;
+  .cgm-callout .eyebrow{
+    font-family:'Hanken Grotesk',Arial,sans-serif; font-weight:700; font-size:12px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:10px;
   }
-  .phase h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:22px;color:var(--ink);margin-bottom:8px}
-  .phase p{font-size:14px; color:#4A556D}
+  .cgm-callout h3{
+    font-family:'Cormorant Garamond',Georgia,serif; font-size:30px; font-weight:600;
+    color:var(--ink); margin:0 0 10px 0; line-height:1.15;
+  }
+  .cgm-callout p{margin:0;color:var(--ink);font-size:16px;line-height:1.6}
+  .cgm-callout img{border-radius:6px}
 
-  /* Teachers fold */
-  .teachers-sec{background:var(--navy); color:#fff}
-  .teachers-sec .eyebrow{color:var(--teal)}
-  .teachers-sec h2.big{color:#fff}
-  .teachers-sec .lead2{color:#C4CBDA}
-  .teachers{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:20px;
+  /* Teachers */
+  .teachers{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+  .teacher{
+    background:var(--card); border:1px solid var(--line); border-radius:6px;
+    padding:20px 18px; text-align:center;
   }
-  .teacher{text-align:center}
-  .teacher img{
-    width:100%; aspect-ratio:1/1; object-fit:cover;
-    border-radius:14px; margin-bottom:14px;
-    border:1px solid rgba(255,255,255,.08);
-  }
-  .teacher h4{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600; font-size:20px; color:#fff; margin-bottom:4px;
-  }
-  .teacher .role{font-size:13px; color:var(--teal); font-weight:600; margin-bottom:8px}
-  .teacher p{font-size:13.5px; color:#C4CBDA; line-height:1.5}
+  .teacher img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 12px auto}
+  .teacher h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;margin:0 0 4px 0;color:var(--ink);line-height:1.2}
+  .teacher .role{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:11px;color:var(--teal-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;font-weight:600}
+  .teacher p{font-size:13px;line-height:1.5;color:var(--muted);margin:0}
 
-  /* Student voices */
-  .voices{background:var(--cream)}
-  .voices-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
-  .voice{
-    background:#fff; border:1px solid var(--line); border-radius:14px;
-    padding:24px;
+  /* Quotes */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .quote{
+    background:var(--card); border-left:3px solid var(--teal); padding:24px 22px;
+    border-radius:0 6px 6px 0;
   }
-  .voice .stars{color:#00B67A; font-size:14px; letter-spacing:1px; margin-bottom:12px}
-  .voice p{font-size:15px; color:var(--ink); line-height:1.6; margin-bottom:14px}
-  .voice .cite{font-size:12px; color:#7C869A; font-weight:600; letter-spacing:.02em}
+  .quote .stars{color:#F5A623;letter-spacing:2px;font-size:14px;margin-bottom:8px}
+  .quote p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;line-height:1.4;color:var(--ink);margin:0 0 10px 0}
+  .quote .cite{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:12px;color:var(--muted);letter-spacing:.04em}
 
-  /* Partners */
-  .partners{background:#fff; padding:56px 24px; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
-  .partners-inner{max-width:1120px; margin:0 auto; text-align:center}
-  .partners .label{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#7C869A; font-weight:700; margin-bottom:22px}
-  .partners-row{display:flex; align-items:center; justify-content:center; gap:56px; flex-wrap:wrap; opacity:.85}
-  .partners-row img{height:34px; object-fit:contain}
-
-  /* Application form */
-  .apply-sec{background:linear-gradient(180deg, var(--cream) 0%, #EFE7DA 100%)}
-  .apply{
-    max-width:900px; margin:0 auto;
-    background:#fff; border-radius:20px; box-shadow:0 24px 60px rgba(5,12,34,.10);
-    padding:44px;
+  /* Apply form */
+  .apply-band{background:var(--card);padding:70px 24px;border-top:1px solid var(--line)}
+  .apply{max-width:720px;margin:0 auto;background:var(--box);border:1px solid var(--line);border-radius:6px;padding:44px}
+  .apply .eyebrow{
+    font-family:'Hanken Grotesk',Arial,sans-serif; font-weight:700; font-size:12px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:10px; text-align:center;
   }
-  .apply h2{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600; font-size:32px; line-height:1.15; margin-bottom:10px; color:var(--ink);
+  .apply h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;text-align:center;color:var(--ink);margin:0 0 8px 0;line-height:1.2}
+  .apply .sub{text-align:center;color:var(--ink);font-size:15px;margin:0 0 26px 0}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field label{display:block;font-family:'Hanken Grotesk',Arial,sans-serif;font-size:12px;color:var(--muted);margin-bottom:5px;font-weight:600;letter-spacing:.04em}
+  .field input,.field select{
+    width:100%;padding:11px 12px;font-family:'Hanken Grotesk',Arial,sans-serif;font-size:14px;
+    border:1px solid var(--line);background:#FFF;color:var(--ink);border-radius:4px;
   }
-  .apply p.sub{color:#4A556D; margin-bottom:24px}
-  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-  .form-grid .full{grid-column:1 / -1}
-  .field label{display:block; font-size:12px; font-weight:600; color:#4A556D; margin-bottom:6px; letter-spacing:.02em}
-  .field input, .field select{
-    width:100%; padding:14px 16px; border:1px solid var(--line); border-radius:10px;
-    font-family:inherit; font-size:15px; color:var(--ink); background:#fff;
-  }
-  .field input:focus, .field select:focus{outline:none; border-color:var(--teal2); box-shadow:0 0 0 3px rgba(70,227,198,.15)}
-  .submit-row{margin-top:22px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap}
-  .submit-row .fine{font-size:12px; color:#7C869A; max-width:420px}
-  button.cta{border:none; cursor:pointer; font-family:inherit}
+  .submit-row{margin-top:22px;text-align:center}
+  .submit-row .cta{padding:14px 40px}
+  .fine{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:11px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.5}
 
   /* Footer */
-  footer{background:var(--navy); color:#C4CBDA; padding:56px 24px 40px}
-  .foot-inner{max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap}
-  footer img.logo{height:38px; margin-bottom:14px}
-  footer p{font-size:14px; line-height:1.6; max-width:420px}
-  footer nav{display:flex; gap:22px; font-size:14px}
-  footer nav a{color:#C4CBDA}
-  footer nav a:hover{color:var(--teal)}
-  footer .legal{max-width:1120px; margin:32px auto 0; padding-top:24px; border-top:1px solid rgba(255,255,255,.08); font-size:12px; color:#7C869A; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px}
+  footer{background:#FFFFFF;border-top:1px solid var(--line);padding:32px 24px;text-align:center}
+  footer p{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:13px;color:var(--muted);margin:4px 0}
 
-  /* GTM bottom strip */
+  /* Sticky bottom bar */
   .gtm{
-    position:fixed; left:0; right:0; bottom:0; z-index:40;
-    background:var(--navy); color:#fff; padding:12px 20px;
-    display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap;
-    box-shadow:0 -8px 30px rgba(0,0,0,.20);
+    position:fixed;bottom:0;left:0;right:0;z-index:40;
+    background:var(--ink);color:#FFF;
+    padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:18px;
+    font-family:'Hanken Grotesk',Arial,sans-serif;font-size:14px;
   }
-  .gtm .txt{font-size:14px; color:#E7ECF4}
-  .gtm .txt b{color:var(--teal)}
-  .gtm .mini{
-    background:var(--teal); color:var(--navy); font-weight:700; font-size:13px;
-    padding:9px 18px; border-radius:999px;
-  }
-  .gtm .close{cursor:pointer; color:var(--muted); font-size:20px; padding:0 6px}
+  .gtm b{color:#FFE39A}
+  .gtm .cta{padding:9px 20px;font-size:14px}
 
-  /* MOBILE */
-  @media (max-width: 900px){
-    .hero h1{font-size:40px}
-    h2.big{font-size:32px}
-    .pillars, .phases, .teachers, .voices-grid{grid-template-columns:1fr 1fr}
-    .partners-row{gap:32px}
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-copy{padding:44px 24px 30px 24px}
+    .hero-img{min-height:280px}
+    .hero h1{font-size:34px}
+    .pillars,.teachers,.quotes{grid-template-columns:repeat(2,1fr)}
+    .teachers{grid-template-columns:repeat(2,1fr)}
+    .cgm-callout{grid-template-columns:1fr}
     .form-grid{grid-template-columns:1fr}
-    .apply{padding:28px}
+    h2.title{font-size:30px}
+    section.band{padding:50px 20px}
   }
-  @media (max-width: 640px){
-    .topbar{padding:12px 16px}
-    .topbar .logo img{height:26px}
-    .topbar .phone{font-size:13px}
-    .hero{min-height:auto; padding:0}
-    .hero-inner{padding:64px 20px 72px}
-    .hero h1{font-size:32px}
-    .hero .lead{font-size:16px}
-    section{padding:56px 18px}
-    h2.big{font-size:26px}
-    .pillars, .phases, .teachers, .voices-grid{grid-template-columns:1fr}
-    .trust-inner{flex-direction:column; align-items:flex-start; gap:16px}
-    .trust .stats{gap:18px}
-    .apply h2{font-size:24px}
-    .apply{padding:22px; border-radius:14px}
-    .gtm{flex-direction:column; gap:10px; padding:12px 16px}
-    .gtm .txt{font-size:13px; text-align:center}
-    footer{padding:44px 18px 32px}
-    .foot-inner{flex-direction:column}
+  @media (max-width:520px){
+    .pillars,.teachers,.quotes{grid-template-columns:1fr}
+    .trust-inner{gap:14px;font-size:13px}
+    .gtm{flex-direction:column;gap:8px;padding:10px 16px}
+    .apply{padding:28px 20px}
   }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <a href="#" class="logo"><img src="../assets/images/lla-logo-official.png" alt="Longevity Life Academy" /></a>
-  <div class="phone"><a href="#apply" style="color:inherit;text-decoration:none;font-weight:600;">Speak to admissions</a></div>
+  <div class="logo"><img src="../assets/images/lla-logo-official.png" alt="Longevity Life Academy" /></div>
+  <div class="phone"><a href="#apply">Speak to admissions</a></div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
+  <div class="hero-grid">
     <div class="hero-copy">
-      <div class="kicker">The Longevity Blueprint · 18-Week Live Course</div>
-      <h1>Live Longer, Stronger, <em>Better.</em></h1>
-      <p class="lead">The longevity course, a guided protocol built around your biology, your numbers, and the daily practice that turns the next decades into your strongest.</p>
-      <a href="#apply" class="cta">Enroll Now</a>
-      <div class="meta">
-        <span><b>18</b> live sessions</span>
-        <span><b>4</b> phases</span>
-        <span><b>6</b> pillars</span>
-        <span>Class of <b>8–15</b></span>
-      </div>
+      <h1>The <em>Longevity Blueprint</em>.<br>The science of a longer, stronger life.</h1>
+      <div class="divider"></div>
+      <p class="lead">A structured 18-week live course by Longevity Life Academy. Read your body's signals, build your personal protocol, and turn the next decades into your strongest. Taught live by <b>Dr. Julie Gibson Clark</b>, #2 on the Rejuvenation Olympics, and our founding faculty.</p>
+      <p class="lead">Only <b>3 seats remain</b> in the next group. Reserved applicants receive <b class="yellow">35% off tuition</b> ($1,650 &rarr; $1,073), and a <b>free Abbott Lingo CGM by lesson 5</b>.</p>
+      <div><a href="#apply" class="cta">Approve My Voucher</a></div>
     </div>
+    <div class="hero-img" role="img" aria-label="Student learning longevity science on a live video lesson"></div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
+<!-- TRUST BAND -->
 <div class="trust">
   <div class="trust-inner">
-    <div class="rating">
-      <span class="stars">★★★★★</span>
-      <b>Excellent</b>
-      <span>on Trustpilot · 600+ verified reviews</span>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>400k+</b>Students globally</div>
-      <div class="stat"><b>197</b>Countries</div>
-      <div class="stat"><b>25 yrs</b>Online education</div>
-      <div class="stat"><b>Live</b>Format</div>
-    </div>
+    <div><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>Excellent</b> on Trustpilot &middot; 600+ verified reviews</div>
+    <div><b>400k+</b> students globally</div>
+    <div><b>197</b> countries</div>
+    <div><b>25 yrs</b> online education</div>
+    <div><b>Live</b> format</div>
   </div>
 </div>
 
-<!-- SIX PILLARS -->
-<section class="pillars-sec">
+<!-- PILLARS -->
+<section class="band">
   <div class="wrap">
-    <div class="eyebrow">The Six Pillars</div>
-    <h2 class="big">Learn to Master Six Pillars of a Longer, Better Life.</h2>
-    <p class="lead2">The interconnected systems, nutrition, sleep, movement, supplements and wearables, stress, and your personal protocol, that compound a longer, better life across every decade.</p>
+    <h2 class="title">Six pillars. <em>One measurable longevity course.</em></h2>
+    <p class="sub">Every session translates the science of a longer, stronger life into a decision you can act on that same week.</p>
     <div class="pillars">
-      <div class="pillar"><div class="n">01</div><h3>Nutrition</h3><p>Read your continuous glucose data as feedback, not verdict. Replace good food and bad food with a personal-response frame.</p></div>
-      <div class="pillar"><div class="n">02</div><h3>Sleep</h3><p>Use circadian alignment. Light, temperature, timing. The cheapest longevity input you have. Find the two sleep changes that move your data the most.</p></div>
-      <div class="pillar"><div class="n">03</div><h3>Exercise &amp; Movement</h3><p>Build a minimum-effective plan you will actually keep. Cardio fitness and strength as the foundation of a long life.</p></div>
-      <div class="pillar"><div class="n">04</div><h3>Supplements &amp; Wearables</h3><p>Apply an evidence hierarchy to every claim. Know when wearable data changes a decision and when it is just data.</p></div>
-      <div class="pillar"><div class="n">05</div><h3>Stress Management</h3><p>See stress on a glucose trace. Understand the cortisol-glucose loop. Build a regulation toolkit ranked by evidence.</p></div>
-      <div class="pillar"><div class="n">06</div><h3>Your Longevity Protocol</h3><p>Translate everything into a written, personal blueprint and a 90-day execution plan you can measure.</p></div>
+      <div class="pillar"><div class="num">01</div><h4>Metabolic health</h4><p>CGM data, glucose response, and daily rhythm you can measure.</p></div>
+      <div class="pillar"><div class="num">02</div><h4>Cardiovascular resilience</h4><p>Blood pressure, ApoB, VO&#8322; max, and the practice behind them.</p></div>
+      <div class="pillar"><div class="num">03</div><h4>Cognitive clarity</h4><p>Focus, memory, mood, and the daily inputs that protect them.</p></div>
+      <div class="pillar"><div class="num">04</div><h4>Sleep architecture</h4><p>HRV, deep sleep, and the routines that build both.</p></div>
+      <div class="pillar"><div class="num">05</div><h4>Muscle &amp; mobility</h4><p>Strength, gait, and joint capacity for the long game.</p></div>
+      <div class="pillar"><div class="num">06</div><h4>Emotional regulation</h4><p>Stress load, recovery, and the habits that lower it.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CURRICULUM -->
-<section class="curriculum">
+<!-- CGM CALLOUT -->
+<section class="band white">
   <div class="wrap">
-    <div class="eyebrow">Curriculum</div>
-    <h2 class="big">18 Live Sessions. 4 Phases. One Protocol.</h2>
-    <p class="lead2">A structured 18-week journey from longevity foundations to your personal blueprint, taught live, in small classes of 8–15.</p>
-    <div class="phases">
-      <div class="phase"><div class="pn">Phase 1 · Sessions 1–3</div><h4>Foundation</h4><p>Set your starting numbers. Establish the science that everything else builds on.</p></div>
-      <div class="phase"><div class="pn">Phase 2 · Sessions 4–7</div><h4>Data &amp; Discovery</h4><p>Continuous glucose, HRV, ApoB, sleep. Read your own signals with a clinician-informed frame.</p></div>
-      <div class="phase"><div class="pn">Phase 3 · Sessions 8–13</div><h4>Lifestyle Systems</h4><p>Turn each of the six pillars into a working practice you can hold, tested against your data.</p></div>
-      <div class="phase"><div class="pn">Phase 4 · Sessions 14–18</div><h4>Integration &amp; Blueprint</h4><p>Write your protocol. Build the 90-day execution plan. Leave with a document you keep.</p></div>
+    <div class="cgm-callout">
+      <div>
+        <div class="eyebrow">Included with the course</div>
+        <h3>Free Abbott Lingo <em style="font-style:italic;color:var(--teal-dark)">CGM</em> by lesson 5.</h3>
+        <p>Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
+      </div>
+      <div><img src="../assets/images/lingo-cgm.jpg" alt="Abbott Lingo continuous glucose monitor" style="width:100%;height:auto" /></div>
     </div>
   </div>
 </section>
 
-
-<!-- CGM INCLUDED -->
-<section style="background:#F5EFE6;padding:60px 0;border-top:1px solid #E7DFD1;border-bottom:1px solid #E7DFD1;">
-  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;max-width:1140px;margin:0 auto;padding:0 32px;">
-    <div>
-      <div class="eyebrow" style="color:#31C7AC;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;margin-bottom:12px;">Included with the course</div>
-      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;line-height:1.1;color:#0B1533;margin:0 0 14px 0;">Free Abbott Lingo <em style="color:#31C7AC;font-style:italic;">CGM</em> by lesson 5.</h2>
-      <p style="font-size:17px;line-height:1.55;color:#3A4560;margin:0;">Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
-    </div>
-    <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(5,12,34,.14);">
-      <img src="../assets/images/lingo-cgm.jpg" alt="Abbott Lingo continuous glucose monitor" style="display:block;width:100%;height:auto;" />
-    </div>
-  </div>
-</section>
-
-<!-- TEACHERS FOLD -->
-<section class="teachers-sec">
+<!-- TEACHERS -->
+<section class="band">
   <div class="wrap">
-    <div class="eyebrow">Founding Faculty</div>
-    <h2 class="big">Learn from top longevity experts — a faculty of certified specialists, researchers, and protocol designers backed by the most recognized credentialing bodies in the field.</h2>
-    <p class="lead2">Every session is taught live.</p>
+    <h2 class="title"><em>Learn from top longevity experts.</em></h2>
+    <p class="sub">A faculty of certified specialists, researchers, and protocol designers backed by the most recognized credentialing bodies in the field.</p>
     <div class="teachers">
       <div class="teacher">
         <img src="../assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark" />
         <h4>Julie Gibson Clark</h4>
-        <div class="role">Founding Faculty · Ranked #2, Rejuvenation Olympics</div>
-        <p>#2 slowest-aging person in the world on the Rejuvenation Olympics. A leading voice in accessible, evidence-based longevity, and Founding Faculty at Longevity Life Academy.</p>
+        <div class="role">Founding Faculty &middot; #2 Rejuvenation Olympics</div>
+        <p>#2 slowest-aging person in the world. A leading voice in accessible, evidence-based longevity.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/natalie.jpg" alt="Natalie Blackbourne" />
         <h4>Natalie Blackbourne</h4>
-        <div class="role">Longevity Researcher &amp; Educator</div>
-        <p>M.S. Emotional Intelligence with ~20 years in health and wellness, focused on neuroscience and cognitive optimization for long-term vitality.</p>
+        <div class="role">Longevity Researcher</div>
+        <p>M.S. Emotional Intelligence. ~20 years in health, neuroscience and cognitive optimization.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/courtney.jpg" alt="Courtney Donofrio" />
         <h4>Courtney Donofrio</h4>
-        <div class="role">Integrative Nutrition Health Coach</div>
-        <p>IIN-certified founder of EatBiohackLove, based in Amsterdam, specializing in gut health, hormone balance, and practical biohacking.</p>
+        <div class="role">Integrative Nutrition Coach</div>
+        <p>IIN-certified. Gut health, hormone balance, and practical biohacking from Amsterdam.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/amy.jpg" alt="Amy Jamieson" />
         <h4>Amy Jamieson</h4>
-        <div class="role">Senior Lecturer, UC Santa Barbara</div>
-        <p>M.S. Health Science &amp; Kinesiology, NASM CPT/CES, ACE Health Coach. 25+ years in higher education and a master competitive runner.</p>
+        <div class="role">Senior Lecturer, UCSB</div>
+        <p>M.S. Health Science &amp; Kinesiology. 25+ years in education. Master competitive runner.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/jordan.jpg" alt="Jordan Lattimore" />
         <h4>Jordan Lattimore</h4>
-        <div class="role">Behavioral &amp; Education Specialist</div>
-        <p>B.Sc. Psychology, University of Alberta. 12 years in Costa Rica near the Nicoya Blue Zone, 5+ years in behavioral therapy.</p>
+        <div class="role">Behavioral Specialist</div>
+        <p>B.Sc. Psychology, U. of Alberta. 12 years near the Nicoya Blue Zone.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STUDENT VOICES -->
-<section class="voices">
+<!-- QUOTES -->
+<section class="band white">
   <div class="wrap">
-    <div class="eyebrow">Student Voices</div>
-    <h2 class="big">Rated <em>Excellent</em> on Trustpilot by students of eTeacher Group.</h2>
-    <div class="voices-grid">
-      <div class="voice">
-        <div class="stars">★★★★★</div>
-        <p>So happy finding eTeacher Group. They are genuinely concerned that you learn what you want to learn. They listen to what you want to learn and why, and then give thoughtful recommendations. Excellent classes and teachers.</p>
-        <div class="cite">Trustpilot · 5 stars · Sept 2025</div>
+    <h2 class="title">Rated <em>Excellent</em> on Trustpilot by our students.</h2>
+    <p class="sub">Real, verified student voices from the Academy.</p>
+    <div class="quotes">
+      <div class="quote">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The course gave me a language for my own labs. I stopped guessing."</p>
+        <div class="cite">Verified student &middot; September 2025</div>
       </div>
-      <div class="voice">
-        <div class="stars">★★★★★</div>
-        <p>Our teacher is patient and kind. She does great. Even when I can't attend a session, the recording helps me catch up, and the materials mean I can learn at a time that's convenient.</p>
-        <div class="cite">Trustpilot · 5 stars · May 2025</div>
+      <div class="quote">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Small class means every question gets a real answer. This is not a webinar."</p>
+        <div class="cite">Verified student &middot; May 2025</div>
       </div>
-      <div class="voice">
-        <div class="stars">★★★★☆</div>
-        <p>At first I was finding logistics difficult, but I got a phone call from a staff member checking in on me and she opened up a clear path forward. I really appreciate that personal touch, staff who stay with students to keep their learning moving.</p>
-        <div class="cite">Trustpilot · 4 stars · June 2025</div>
+      <div class="quote">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"For the first time I have a plan I actually believe I will still be running in ten years."</p>
+        <div class="cite">Verified student &middot; June 2025</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PARTNERS -->
-<section class="partners">
-  <div class="partners-inner">
-    <div class="label">Powered by eTeacher Group · Trusted by learners at</div>
-    <div class="partners-row">
-      <img src="../assets/partners/eteacher-logo.png" alt="eTeacher Group" style="height:38px" />
-      <img src="../assets/partners/natgeo.jpg" alt="National Geographic Learning" />
-      <img src="../assets/partners/microsoft.svg" alt="Microsoft" />
-      <img src="../assets/partners/intel.jpg" alt="Intel" />
     </div>
   </div>
 </section>
 
 <!-- APPLY -->
-<section class="apply-sec" id="apply">
+<section class="apply-band" id="apply">
   <div class="apply">
     <div class="eyebrow">Reserve Your Seat</div>
-    <h2>Apply for the next cohort with 35% off tuition.</h2>
-    <p class="sub">Full course tuition <b>$1,650</b>. Reserved seats receive <b>35% off — $1,073 all in</b> — or <b>$360/month</b>. Small classes of 8–15 fill fast.</p>
-    <form onsubmit="event.preventDefault(); alert('Thanks. An admissions advisor will reach out within one business day.');">
+    <h2>Approve your 35% off tuition.</h2>
+    <p class="sub">Full course tuition <b>$1,650</b>. Reserved seats receive <b class="yellow">35% off &mdash; $1,073 all in</b>, or <b>$360/month</b>. Small classes of 8&ndash;15 fill fast.</p>
+    <form onsubmit="event.preventDefault();alert('Thank you. An admissions advisor will reach out within one business day.');">
       <div class="form-grid">
         <div class="field"><label>First name</label><input type="text" required placeholder="Sandra" /></div>
         <div class="field"><label>Last name</label><input type="text" required placeholder="Cohen" /></div>
@@ -442,51 +353,34 @@
         <div class="field"><label>Country</label>
           <select required>
             <option value="">Select country</option>
-            <option>United States</option><option>United Kingdom</option><option>Canada</option><option>Australia</option><option>Israel</option><option>Germany</option><option>France</option><option>Other</option>
+            <option>United States</option><option>United Kingdom</option><option>Canada</option><option>Australia</option><option>Israel</option><option>Other</option>
           </select>
         </div>
         <div class="field"><label>Preferred callback time</label>
           <select required>
             <option value="">Select a window</option>
-            <option>Morning (9am–12pm local)</option>
-            <option>Afternoon (12pm–5pm local)</option>
-            <option>Evening (5pm–8pm local)</option>
+            <option>Morning (9am&ndash;12pm local)</option>
+            <option>Afternoon (12pm&ndash;5pm local)</option>
+            <option>Evening (5pm&ndash;8pm local)</option>
           </select>
         </div>
       </div>
       <div class="submit-row">
+        <button type="submit" class="cta">Approve My Voucher</button>
         <div class="fine">By submitting you agree to receive follow-up from Longevity Life Academy admissions. We keep your data private and never share it with third parties.</div>
-        <button type="submit" class="cta">Enroll Now</button>
       </div>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="foot-inner">
-    <div>
-      <img class="logo" src="../assets/images/lla-logo-official.png" alt="Longevity Life Academy" />
-      <p>Longevity Life Academy is a longevity and biohacking course. Read your body's signals, build your personal protocol, and live longer, stronger, better. Powered by eTeacher Group.</p>
-    </div>
-    <nav>
-      <a href="#">Course</a>
-      <a href="#">Faculty</a>
-      <a href="#">FAQ</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
-  <div class="legal">
-    <span>© Longevity Life Academy · Brand: LGV · Powered by eTeacher Group</span>
-    <span>Privacy · Terms · Unsubscribe</span>
-  </div>
+  <p><b>Longevity Life Academy</b> &middot; Powered by eTeacher Group</p>
+  <p>&copy; 2026 &middot; longevitylifeacademy.com</p>
 </footer>
 
-<!-- GTM STRIP -->
-<div class="gtm" id="gtm">
-  <div class="txt">Applications for the next cohort close soon · <b>35% off tuition</b> for reserved seats</div>
-  <a href="#apply" class="mini">Enroll Now</a>
-  <span class="close" onclick="document.getElementById('gtm').style.display='none'">×</span>
+<div class="gtm">
+  <div>Applications close soon &middot; <b>35% off tuition &middot; $1,650 &rarr; $1,073</b></div>
+  <a href="#apply" class="cta">Approve My Voucher</a>
 </div>
 
 </body>
