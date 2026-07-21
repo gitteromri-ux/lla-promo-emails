@@ -75,10 +75,21 @@
   .cgm-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
   .cgm-row img{width:100%;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
 
-  .pricing-card{background:#fff;border:2px solid var(--blue);border-radius:22px;padding:36px;max-width:520px;margin:0 auto;text-align:center;color:var(--ink)}
-  .price-old{color:#8b95a8;text-decoration:line-through;font-size:18px}
-  .price-new{font-family:'Instrument Serif',serif;font-size:56px;color:var(--ink);font-weight:400;line-height:1}
-  .price-note{color:#5a6478;font-size:14px;margin-top:8px}
+  /* REDEEM FOLD · big 35% off, tiny price, big CTA */
+  .redeem{background:linear-gradient(180deg,#F5F0E5 0%,#EDE4CE 100%);padding:64px 0;color:var(--ink)}
+  .redeem-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+  .redeem h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(30px,3.4vw,42px);line-height:1.15;color:var(--ink);margin-bottom:14px}
+  .redeem h2 em{font-style:italic;color:var(--blue)}
+  .redeem p.sub{font-size:16px;line-height:1.55;color:#4a5468;margin-bottom:22px}
+  .redeem-card{background:#fff;border:1px solid #E4DECB;border-radius:22px;padding:40px 32px;text-align:center;box-shadow:0 20px 60px rgba(10,18,32,.10)}
+  .redeem-badge{display:inline-block;background:linear-gradient(135deg,#1a7fff 0%,#0066ff 100%);color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:20px}
+  .redeem-big{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(72px,10vw,110px);font-weight:400;line-height:.95;color:var(--blue);letter-spacing:-.02em}
+  .redeem-big small{display:block;font-family:'Inter',sans-serif;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:#4a5468;font-weight:700;margin-top:8px}
+  .redeem-price-line{margin:20px 0 24px;color:#4a5468;font-size:15px}
+  .redeem-price-line s{color:#8b95a8;margin-right:8px}
+  .redeem-price-line b{color:var(--ink);font-weight:700}
+  .redeem-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#1a7fff 0%,#0066ff 100%);color:#fff;padding:18px 32px;border-radius:999px;font-size:16px;font-weight:700;box-shadow:0 8px 26px rgba(26,127,255,.4);width:100%;max-width:340px}
+  .redeem-fine{font-size:12px;color:#7a8497;margin-top:14px;letter-spacing:.02em}
 
   footer{background:linear-gradient(180deg,#081634 0%,#050c1e 100%);color:#c8d3ea;padding:56px 0 32px;font-size:14px;border-top:1px solid rgba(126,200,255,.15)}
   footer .container{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
@@ -103,6 +114,8 @@
     .promo-strip-inner{gap:14px}
     .promo-left{flex:1 1 100%}
     .promo-price{font-size:22px}
+    .redeem-inner{grid-template-columns:1fr;gap:32px}
+    .redeem-big{font-size:88px}
   }
 </style>
 </head>
@@ -148,6 +161,23 @@
     <span><strong>Live</strong> format</span>
   </div>
 </div>
+
+<section class="redeem" id="apply">
+  <div class="redeem-inner">
+    <div>
+      <h2>Redeem your <em>Founder's voucher</em> before applications close.</h2>
+      <p class="sub">Only <b>3 seats remain</b> in the class starting <b>August 3</b>. Your voucher unlocks the full Longevity Blueprint cohort at Founder's pricing. It expires in 48 hours.</p>
+      <p class="sub" style="margin-bottom:0">Live faculty. Free Abbott Lingo CGM by lesson 5. Class of 8 to 15.</p>
+    </div>
+    <div class="redeem-card">
+      <span class="redeem-badge">Founder's Voucher</span>
+      <div class="redeem-big">35%<small>Off Tuition</small></div>
+      <div class="redeem-price-line"><s>$1,650</s> <b>$1,073</b> or $360/month</div>
+      <a href="#" class="redeem-cta">Redeem My 35% Voucher →</a>
+      <div class="redeem-fine">Applications close in 48 hours</div>
+    </div>
+  </div>
+</section>
 
 <section class="block cream">
   <div class="container">
@@ -203,17 +233,7 @@
   </div>
 </section>
 
-<section class="block" id="apply">
-  <div class="container" style="text-align:center">
-    <h2 style="color:#fff">Reserve your seat in the <em>August 3</em> cohort</h2>
-    <div class="pricing-card">
-      <div class="price-old">$1,650</div>
-      <div class="price-new">$1,073</div>
-      <div class="price-note">Or $360/month · 35% off tuition · applications close in 48 hours</div>
-      <a href="#" class="btn-primary" style="margin-top:24px">Reserve My Seat →</a>
-    </div>
-  </div>
-</section>
+
 
 <footer>
   <div class="container">
