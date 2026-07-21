@@ -10,61 +10,57 @@
 
   /* Top bar */
   .top{background:linear-gradient(180deg,#0e1f48 0%,#081634 100%);padding:22px 20px;position:sticky;top:0;z-index:100}
-  .top-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .top-inner{max-width:1600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .top-logo img{height:44px;width:auto;display:block}
-  .top-cta{background:linear-gradient(180deg,#7CC7FF 0%,#3E9DE6 100%);color:#0A1220 !important;text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px;box-shadow:0 4px 12px rgba(94,182,255,.3)}
+  .top-cta{background:linear-gradient(180deg,#7CC7FF 0%,#3E9DE6 100%);color:#0A1220 !important;text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px}
 
   /* Hero */
   .hero-title{background:var(--navy);color:#fff;padding:56px 20px 60px;text-align:center}
   .hero-title h1{font-family:Georgia,serif;font-size:44px;line-height:1.1;margin:0 0 14px;color:#fff}
   .hero-title p{font-size:17px;color:#B8C4DE;margin:0 auto;max-width:760px}
 
-  .container{max-width:1400px;margin:0 auto;padding:56px 20px}
+  .container{max-width:1600px;margin:0 auto;padding:56px 20px}
 
-  /* Section label */
   .section-label{display:flex;align-items:center;gap:14px;margin:0 0 18px}
   .section-label .num{background:var(--navy);color:#fff;width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:700}
   .section-label h2{font-family:Georgia,serif;font-size:30px;line-height:1.15;margin:0;color:var(--navy)}
-  .section-desc{font-size:15px;color:#4a5468;margin:0 0 32px;max-width:900px}
+  .section-desc{font-size:15px;color:#4a5468;margin:0 0 40px;max-width:900px}
 
-  /* Big showcase (2 col) */
-  .showcase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-  @media(max-width:900px){.showcase-grid{grid-template-columns:1fr}}
-  .showcase-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-  .showcase-head{padding:24px 26px 6px}
-  .showcase-head h3{margin:0 0 6px;font-size:20px;color:var(--navy);font-family:Georgia,serif}
-  .showcase-head p{margin:0;font-size:14px;color:#4a5468}
-  .showcase-actions{padding:16px 26px 20px;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);background:#FAF7EE}
+  h3.sub{font-family:Georgia,serif;color:var(--navy);margin:48px 0 20px;font-size:24px;padding-bottom:12px;border-bottom:2px solid var(--line)}
 
-  /* LP preview blocks — show desktop + mobile side by side */
-  .lp-preview{display:grid;grid-template-columns:2fr 1fr;gap:12px;padding:20px 26px;background:#050C22}
-  @media(max-width:640px){.lp-preview{grid-template-columns:1fr}}
-  .lp-preview .thumb{background:#000;border-radius:8px;overflow:hidden;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)}
-  .lp-preview .thumb img{width:100%;display:block}
-  .lp-preview .thumb-label{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase;z-index:2}
-  .lp-preview .thumb.desktop img{max-height:520px;object-fit:cover;object-position:top}
-  .lp-preview .thumb.mobile img{max-height:520px;object-fit:cover;object-position:top}
-
-  /* Email preview block */
-  .email-preview{padding:20px 26px;background:var(--cream);text-align:center}
-  .email-preview img{max-width:100%;width:520px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.15);border:1px solid var(--line)}
+  /* ONE FULL MOCKUP PER CARD, stacked vertically with lots of room */
+  .mockup{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:36px;box-shadow:0 4px 20px rgba(10,30,63,.06)}
+  .mockup-head{padding:24px 30px 12px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  .mockup-head .title{font-family:Georgia,serif;font-size:22px;color:var(--navy);margin:0}
+  .mockup-head .badge{background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+  .mockup-head .badge.mobile{background:#4a5468}
+  .mockup-head p{margin:6px 0 0;font-size:14px;color:#4a5468;width:100%}
+  .mockup-body{padding:32px;background:#050C22;display:flex;justify-content:center;align-items:flex-start}
+  .mockup-body.light{background:var(--cream)}
+  .mockup-body img{max-width:100%;display:block;border-radius:4px;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+  /* Desktop mockups: full width up to natural size */
+  .mockup-body.desktop img{max-width:1400px;width:100%}
+  /* Mobile mockups: constrained width, centered, phone-like */
+  .mockup-body.mobile img{max-width:390px;width:100%;border-radius:20px;border:8px solid #111;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+  /* Emails: constrained to email width */
+  .mockup-body.email img{max-width:640px;width:100%;background:#fff;border:1px solid var(--line)}
+  .mockup-actions{padding:18px 30px;background:#FAF7EE;display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line)}
 
   /* Buttons */
   .btn{display:inline-block;background:var(--blue);color:#0A1220 !important;text-decoration:none;font-weight:700;font-size:13px;padding:10px 18px;border-radius:999px;border:1px solid rgba(0,0,0,.05)}
   .btn:hover{background:var(--blue-hi)}
   .btn.dark{background:var(--navy);color:#fff !important}
   .btn.dark:hover{background:#0e2b5c}
-  .btn.sm{padding:8px 14px;font-size:12px;background:#fff;color:var(--navy) !important;border:1px solid var(--line)}
-  .btn.sm:hover{background:var(--cream)}
 
-  /* Deconstructed grid (3 or 4 col) */
+  /* Deconstructed grid */
   .decon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   @media(max-width:1100px){.decon-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.decon-grid{grid-template-columns:1fr}}
   .decon-card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
   .decon-thumb{background:var(--cream);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
-  .decon-thumb img{max-width:100%;max-height:100%;object-fit:contain;display:block}
-  .decon-thumb.dark{background:var(--navy)}
+  .decon-thumb img{max-width:100%;max-height:100%;object-fit:contain}
+  .decon-thumb.dark{background:#050C22}
+  .decon-thumb.black{background:#0A0C12}
   .decon-body{padding:14px 16px 16px}
   .decon-body h4{margin:0 0 4px;font-size:14px;color:var(--navy)}
   .decon-body p{margin:0 0 10px;font-size:12px;color:var(--muted);line-height:1.4}
@@ -73,17 +69,14 @@
   .chip:hover{background:var(--cream)}
   .chip.primary{background:var(--blue);color:#0A1220 !important;border-color:transparent}
 
-  /* Divider between sections */
   .divider{height:1px;background:var(--line);margin:56px 0 0}
 
-  /* Checklist banner */
   .checklist{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin:0 0 40px}
   .checklist ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
   @media(max-width:720px){.checklist ul{grid-template-columns:1fr}}
   .checklist li{padding:5px 0 5px 24px;position:relative;font-size:13px;color:#2a3244}
   .checklist li::before{content:"✓";position:absolute;left:0;color:#2a9d5c;font-weight:700}
 
-  /* Footer */
   .foot{background:var(--navy);color:#B8C4DE;padding:34px 20px;text-align:center;font-size:13px;margin-top:60px}
 </style></head><body>
 
@@ -96,146 +89,151 @@
 
 <div class="hero-title">
   <h1>The Longevity Blueprint · Campaign Deliverables</h1>
-  <p>Every asset shown in full below. Full landing pages (desktop + mobile), full email designs, and a complete deconstructed library of downloadable elements.</p>
+  <p>Every asset shown separately in full — each desktop and each mobile in its own mockup — followed by a full library of downloadable elements.</p>
 </div>
 
 <div class="container">
 
   <div class="checklist">
     <ul>
-      <li>2 landing pages · desktop + mobile · hero images flipped, full-bleed, no cropping</li>
-      <li>3 designed promo emails + 1 welcome invite · IIBS/Rosen prose structure</li>
-      <li>Text-only versions of every promo email · HTML and plain text for CRM paste</li>
+      <li>2 landing pages · desktop and mobile shown separately in full</li>
+      <li>3 designed promo emails + welcome invite · shown in full separately</li>
+      <li>Text-only versions of every promo email · HTML and plain text</li>
       <li>Every image exported at 400 / 640 / 800 / 1200 / 1600 / 1920w</li>
-      <li>Standalone header and footer as HTML snippets AND PNG at multiple sizes</li>
+      <li>Header and footer as HTML snippets AND PNG at multiple sizes</li>
       <li>Real faculty bios verbatim from longevitylifeacademy.com</li>
-      <li>No teal, no AI notes, no "one payment", no "chosen", no "Brand · LGV" note</li>
-      <li>One ZIP file with every folder organized</li>
+      <li>No teal, no AI notes, no "one payment", no "chosen", no "Brand · LGV"</li>
+      <li>Footers on black · clear centered logo · shorter and clearer</li>
     </ul>
   </div>
 
-  <!-- ===== FULL SHOWCASE ===== -->
-  <div class="section-label">
-    <span class="num">1</span>
-    <h2>Full Deliverables — Every Asset Shown In Full</h2>
-  </div>
-  <p class="section-desc">Live pages and full-page renders of every deliverable. Click through to open the live version, or use the buttons to download the source file.</p>
+  <!-- ===== FULL MOCKUPS ===== -->
+  <div class="section-label"><span class="num">1</span><h2>Full Mockups — Every Version Shown Separately</h2></div>
+  <p class="section-desc">Each landing page and each email in its own full mockup card with room to breathe. Desktop and mobile shown separately, at real proportions.</p>
 
-  <!-- LP1 -->
-  <div class="showcase-grid" style="margin-bottom:28px">
-    <div class="showcase-card">
-      <div class="showcase-head">
-        <h3>LP1 · Longevity Blueprint (Cells Hero)</h3>
-        <p>Desktop and mobile · full-bleed cells background · full-page render below</p>
-      </div>
-      <div class="lp-preview">
-        <div class="thumb desktop">
-          <span class="thumb-label">Desktop</span>
-          <img src="downloads/previews/lp1-desktop-full.png" alt="LP1 desktop full">
-        </div>
-        <div class="thumb mobile">
-          <span class="thumb-label">Mobile</span>
-          <img src="downloads/previews/lp1-mobile-full.png" alt="LP1 mobile full">
-        </div>
-      </div>
-      <div class="showcase-actions">
-        <a class="btn dark" href="lp/" target="_blank">↗ Open Live LP1</a>
-        <a class="btn" href="downloads/previews/lp1-desktop-full.png" download>⬇ Desktop preview</a>
-        <a class="btn" href="downloads/previews/lp1-mobile-full.png" download>⬇ Mobile preview</a>
-      </div>
+  <h3 class="sub">LP1 · Longevity Blueprint (Cells Hero)</h3>
+
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">LP1 · Desktop</h3></div>
+      <span class="badge">Desktop · 1400px</span>
+      <p>Full-bleed cells hero, mirrored L↔R, real Julie Gibson Clark & full faculty bios, sticky "Claim 35% Off Now" pill.</p>
     </div>
-
-    <div class="showcase-card">
-      <div class="showcase-head">
-        <h3>LP2 · Personal Invitation (Zoom Cohort Hero)</h3>
-        <p>Desktop and mobile · laptop-Zoom collage full-bleed · text sits off the laptop</p>
-      </div>
-      <div class="lp-preview">
-        <div class="thumb desktop">
-          <span class="thumb-label">Desktop</span>
-          <img src="downloads/previews/lp2-desktop-full.png" alt="LP2 desktop full">
-        </div>
-        <div class="thumb mobile">
-          <span class="thumb-label">Mobile</span>
-          <img src="downloads/previews/lp2-mobile-full.png" alt="LP2 mobile full">
-        </div>
-      </div>
-      <div class="showcase-actions">
-        <a class="btn dark" href="lp/dark.html" target="_blank">↗ Open Live LP2</a>
-        <a class="btn" href="downloads/previews/lp2-desktop-full.png" download>⬇ Desktop preview</a>
-        <a class="btn" href="downloads/previews/lp2-mobile-full.png" download>⬇ Mobile preview</a>
-      </div>
+    <div class="mockup-body desktop"><img src="downloads/previews/lp1-desktop-full.png" alt="LP1 desktop"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="lp/" target="_blank">↗ Open Live LP1</a>
+      <a class="btn" href="downloads/previews/lp1-desktop-full.png" download>⬇ Desktop mockup PNG</a>
     </div>
   </div>
 
-  <!-- Emails full showcase -->
-  <div class="showcase-grid">
-    <div class="showcase-card">
-      <div class="showcase-head">
-        <h3>Email 1 · Approve My Voucher</h3>
-        <p>Julie Gibson Clark follows up personally · 3 seats left · 35% voucher</p>
-      </div>
-      <div class="email-preview"><img src="downloads/previews/email-01-voucher.png" alt="Email 1 full"></div>
-      <div class="showcase-actions">
-        <a class="btn dark" href="emails/01-voucher.html" target="_blank">↗ Open Live</a>
-        <a class="btn" href="downloads/emails-designed/01-voucher.html" download>⬇ HTML (designed)</a>
-        <a class="btn" href="downloads/emails-text/01-voucher-text.html" download>⬇ HTML (text-only)</a>
-        <a class="btn" href="downloads/emails-text/01-voucher.txt" download>⬇ .txt</a>
-      </div>
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">LP1 · Mobile</h3></div>
+      <span class="badge mobile">Mobile · 390px</span>
+      <p>Real iPhone viewport render, cells hero full-bleed, images uncropped, sticky FAB visible.</p>
     </div>
-
-    <div class="showcase-card">
-      <div class="showcase-head">
-        <h3>Email 2 · Claim My Gift</h3>
-        <p>$577 Founder's Gift · valid until Sunday midnight · IIBS gift-email cadence</p>
-      </div>
-      <div class="email-preview"><img src="downloads/previews/email-02-gift.png" alt="Email 2 full"></div>
-      <div class="showcase-actions">
-        <a class="btn dark" href="emails/02-gift.html" target="_blank">↗ Open Live</a>
-        <a class="btn" href="downloads/emails-designed/02-gift.html" download>⬇ HTML (designed)</a>
-        <a class="btn" href="downloads/emails-text/02-gift-text.html" download>⬇ HTML (text-only)</a>
-        <a class="btn" href="downloads/emails-text/02-gift.txt" download>⬇ .txt</a>
-      </div>
+    <div class="mockup-body mobile"><img src="downloads/previews/lp1-mobile-full.png" alt="LP1 mobile"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="lp/" target="_blank">↗ Open Live LP1</a>
+      <a class="btn" href="downloads/previews/lp1-mobile-full.png" download>⬇ Mobile mockup PNG</a>
     </div>
+  </div>
 
-    <div class="showcase-card">
-      <div class="showcase-head">
-        <h3>Email 3 · Explore My Scholarship</h3>
-        <p>Academic committee released scholarships · 72-hour claim · August 3 cohort</p>
-      </div>
-      <div class="email-preview"><img src="downloads/previews/email-03-cohort-begins.png" alt="Email 3 full"></div>
-      <div class="showcase-actions">
-        <a class="btn dark" href="emails/03-cohort-begins.html" target="_blank">↗ Open Live</a>
-        <a class="btn" href="downloads/emails-designed/03-cohort-begins.html" download>⬇ HTML (designed)</a>
-        <a class="btn" href="downloads/emails-text/03-cohort-begins-text.html" download>⬇ HTML (text-only)</a>
-        <a class="btn" href="downloads/emails-text/03-cohort-begins.txt" download>⬇ .txt</a>
-      </div>
+  <h3 class="sub">LP2 · Personal Invitation (Zoom Cohort Hero)</h3>
+
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">LP2 · Desktop</h3></div>
+      <span class="badge">Desktop · 1400px</span>
+      <p>Laptop-Zoom collage positioned right, text on dark left, all 6 cohort tiles visible, mirrored, full-bleed.</p>
     </div>
+    <div class="mockup-body desktop"><img src="downloads/previews/lp2-desktop-full.png" alt="LP2 desktop"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="lp/dark.html" target="_blank">↗ Open Live LP2</a>
+      <a class="btn" href="downloads/previews/lp2-desktop-full.png" download>⬇ Desktop mockup PNG</a>
+    </div>
+  </div>
 
-    <div class="showcase-card">
-      <div class="showcase-head">
-        <h3>Email 4 · Welcome Invite</h3>
-        <p>Personal welcome · class of 8–15 · free Abbott Lingo CGM by lesson 5</p>
-      </div>
-      <div class="email-preview"><img src="downloads/previews/email-04-welcome-invite.png" alt="Email 4 full"></div>
-      <div class="showcase-actions">
-        <a class="btn dark" href="emails/04-welcome-invite.html" target="_blank">↗ Open Live</a>
-        <a class="btn" href="downloads/emails-designed/04-welcome-invite.html" download>⬇ HTML (designed)</a>
-      </div>
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">LP2 · Mobile</h3></div>
+      <span class="badge mobile">Mobile · 390px</span>
+      <p>Real iPhone viewport render, Zoom collage uncropped, sticky FAB visible.</p>
+    </div>
+    <div class="mockup-body mobile"><img src="downloads/previews/lp2-mobile-full.png" alt="LP2 mobile"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="lp/dark.html" target="_blank">↗ Open Live LP2</a>
+      <a class="btn" href="downloads/previews/lp2-mobile-full.png" download>⬇ Mobile mockup PNG</a>
+    </div>
+  </div>
+
+  <h3 class="sub">Emails · Each Shown In Full</h3>
+
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">Email 1 · Approve My Voucher</h3></div>
+      <span class="badge">Full design</span>
+      <p>Julie Gibson Clark, founding faculty lead, reviews applications personally · 3 seats left · 35% voucher.</p>
+    </div>
+    <div class="mockup-body email"><img src="downloads/previews/email-01-voucher.png" alt="Email 1 full"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="emails/01-voucher.html" target="_blank">↗ Open Live</a>
+      <a class="btn" href="downloads/emails-designed/01-voucher.html" download>⬇ HTML designed</a>
+      <a class="btn" href="downloads/emails-text/01-voucher-text.html" download>⬇ HTML text-only</a>
+      <a class="btn" href="downloads/emails-text/01-voucher.txt" download>⬇ .txt</a>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">Email 2 · Claim My Gift</h3></div>
+      <span class="badge">Full design</span>
+      <p>$577 Founder's Gift toward enrollment, valid until Sunday midnight.</p>
+    </div>
+    <div class="mockup-body email"><img src="downloads/previews/email-02-gift.png" alt="Email 2 full"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="emails/02-gift.html" target="_blank">↗ Open Live</a>
+      <a class="btn" href="downloads/emails-designed/02-gift.html" download>⬇ HTML designed</a>
+      <a class="btn" href="downloads/emails-text/02-gift-text.html" download>⬇ HTML text-only</a>
+      <a class="btn" href="downloads/emails-text/02-gift.txt" download>⬇ .txt</a>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">Email 3 · Explore My Scholarship</h3></div>
+      <span class="badge">Full design</span>
+      <p>Academic committee released scholarships · cream details box · 72-hour claim · August 3 cohort.</p>
+    </div>
+    <div class="mockup-body email"><img src="downloads/previews/email-03-cohort-begins.png" alt="Email 3 full"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="emails/03-cohort-begins.html" target="_blank">↗ Open Live</a>
+      <a class="btn" href="downloads/emails-designed/03-cohort-begins.html" download>⬇ HTML designed</a>
+      <a class="btn" href="downloads/emails-text/03-cohort-begins-text.html" download>⬇ HTML text-only</a>
+      <a class="btn" href="downloads/emails-text/03-cohort-begins.txt" download>⬇ .txt</a>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-head">
+      <div><h3 class="title">Email 4 · Welcome Invite</h3></div>
+      <span class="badge">Full design</span>
+      <p>Personal welcome to class of 8–15 · Julie Gibson Clark named · free Abbott Lingo CGM by lesson 5.</p>
+    </div>
+    <div class="mockup-body email"><img src="downloads/previews/email-04-welcome-invite.png" alt="Email 4 full"></div>
+    <div class="mockup-actions">
+      <a class="btn dark" href="emails/04-welcome-invite.html" target="_blank">↗ Open Live</a>
+      <a class="btn" href="downloads/emails-designed/04-welcome-invite.html" download>⬇ HTML designed</a>
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- ===== DECONSTRUCTED LIBRARY ===== -->
-  <div class="section-label" style="margin-top:56px">
-    <span class="num">2</span>
-    <h2>Deconstructed — Every Element, Every Size</h2>
-  </div>
-  <p class="section-desc">Every element from the pages above, broken into individual downloads at all resolutions. Nothing cropped. Nothing smeared.</p>
+  <!-- ===== DECONSTRUCTED ===== -->
+  <div class="section-label" style="margin-top:56px"><span class="num">2</span><h2>Deconstructed — Every Element, Every Size</h2></div>
+  <p class="section-desc">Every element broken into individual downloads at all resolutions.</p>
 
-  <!-- LP1 hero at every size -->
-  <h3 style="font-family:Georgia,serif;color:var(--navy);margin:32px 0 14px;font-size:22px">LP1 · Cells Hero — 6 sizes</h3>
+  <h3 class="sub">LP1 · Cells Hero — 6 sizes</h3>
   <div class="decon-grid">
     <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/lp1-hero/lp1-cells-1920w.jpg"></div><div class="decon-body"><h4>1920w</h4><p>Retina desktop · original</p><div class="decon-btns"><a class="chip primary" href="downloads/lp1-hero/lp1-cells-1920w.jpg" download>⬇ Download</a></div></div></div>
     <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/lp1-hero/lp1-cells-1600w.jpg"></div><div class="decon-body"><h4>1600w</h4><p>Desktop 2x</p><div class="decon-btns"><a class="chip primary" href="downloads/lp1-hero/lp1-cells-1600w.jpg" download>⬇ Download</a></div></div></div>
@@ -245,8 +243,7 @@
     <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/lp1-hero/lp1-cells-400w.jpg"></div><div class="decon-body"><h4>400w</h4><p>Mobile 1x</p><div class="decon-btns"><a class="chip primary" href="downloads/lp1-hero/lp1-cells-400w.jpg" download>⬇ Download</a></div></div></div>
   </div>
 
-  <!-- LP2 hero -->
-  <h3 style="font-family:Georgia,serif;color:var(--navy);margin:32px 0 14px;font-size:22px">LP2 · Zoom Cohort Hero — 6 sizes</h3>
+  <h3 class="sub">LP2 · Zoom Cohort Hero — 6 sizes</h3>
   <div class="decon-grid">
     <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/lp2-hero/lp2-laptop-zoom-1920w.jpg"></div><div class="decon-body"><h4>1920w</h4><p>Retina desktop · original</p><div class="decon-btns"><a class="chip primary" href="downloads/lp2-hero/lp2-laptop-zoom-1920w.jpg" download>⬇ Download</a></div></div></div>
     <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/lp2-hero/lp2-laptop-zoom-1600w.jpg"></div><div class="decon-body"><h4>1600w</h4><p>Desktop 2x</p><div class="decon-btns"><a class="chip primary" href="downloads/lp2-hero/lp2-laptop-zoom-1600w.jpg" download>⬇ Download</a></div></div></div>
@@ -256,26 +253,23 @@
     <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/lp2-hero/lp2-laptop-zoom-400w.jpg"></div><div class="decon-body"><h4>400w</h4><p>Mobile 1x</p><div class="decon-btns"><a class="chip primary" href="downloads/lp2-hero/lp2-laptop-zoom-400w.jpg" download>⬇ Download</a></div></div></div>
   </div>
 
-  <!-- Email header + footer -->
-  <h3 style="font-family:Georgia,serif;color:var(--navy);margin:32px 0 14px;font-size:22px">Email Header + Footer — HTML and PNG</h3>
+  <h3 class="sub">Email Header + Footer — HTML and PNG</h3>
   <div class="decon-grid">
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/headers-footers/lla-email-header-desktop.png"></div><div class="decon-body"><h4>Header (desktop)</h4><p>Navy · centered logo · 4px blue divider</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-header-desktop-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-header-desktop.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/header-snippet.html" download>HTML</a></div></div></div>
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/headers-footers/lla-email-header-mobile.png"></div><div class="decon-body"><h4>Header (mobile)</h4><p>600w email-safe · retina 2x included</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-header-mobile-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-header-mobile.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-header-600.png" download>600w</a></div></div></div>
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/headers-footers/lla-email-footer-desktop.png"></div><div class="decon-body"><h4>Footer (desktop)</h4><p>Navy · logo · "Powered by eTeacher Group" · unsubscribe row</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-footer-desktop-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-footer-desktop.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/footer-snippet.html" download>HTML</a></div></div></div>
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/headers-footers/lla-email-footer-mobile.png"></div><div class="decon-body"><h4>Footer (mobile)</h4><p>600w email-safe · retina 2x included</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-footer-mobile-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-footer-mobile.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-footer-600.png" download>600w</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/headers-footers/lla-email-header-desktop.png"></div><div class="decon-body"><h4>Header · desktop</h4><p>Navy · centered logo · 4px blue divider</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-header-desktop-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-header-desktop.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/header-snippet.html" download>HTML</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/headers-footers/lla-email-header-mobile.png"></div><div class="decon-body"><h4>Header · mobile</h4><p>600w email-safe</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-header-mobile-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-header-mobile.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-header-600.png" download>600w</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb black"><img src="downloads/headers-footers/lla-email-footer-desktop.png"></div><div class="decon-body"><h4>Footer · desktop</h4><p>Black · clear centered logo · shorter</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-footer-desktop-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-footer-desktop.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/footer-snippet.html" download>HTML</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb black"><img src="downloads/headers-footers/lla-email-footer-mobile.png"></div><div class="decon-body"><h4>Footer · mobile</h4><p>Black · 600w email-safe</p><div class="decon-btns"><a class="chip primary" href="downloads/headers-footers/lla-email-footer-mobile-2x.png" download>2x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-footer-mobile.png" download>1x PNG</a><a class="chip" href="downloads/headers-footers/lla-email-footer-600.png" download>600w</a></div></div></div>
   </div>
 
-  <!-- Logos -->
-  <h3 style="font-family:Georgia,serif;color:var(--navy);margin:32px 0 14px;font-size:22px">Logos — 4 sizes</h3>
+  <h3 class="sub">Logos — 4 sizes</h3>
   <div class="decon-grid">
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-1200w.png"></div><div class="decon-body"><h4>1200w · transparent PNG</h4><p>Print / large web</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-1200w.png" download>⬇ Download</a></div></div></div>
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-800w.png"></div><div class="decon-body"><h4>800w · transparent PNG</h4><p>Standard web</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-800w.png" download>⬇ Download</a></div></div></div>
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-640w.png"></div><div class="decon-body"><h4>640w · transparent PNG</h4><p>Email retina</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-640w.png" download>⬇ Download</a></div></div></div>
-    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-400w.png"></div><div class="decon-body"><h4>400w · transparent PNG</h4><p>Nav / footer</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-400w.png" download>⬇ Download</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-1200w.png"></div><div class="decon-body"><h4>1200w · transparent</h4><p>Print / large web</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-1200w.png" download>⬇ Download</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-800w.png"></div><div class="decon-body"><h4>800w · transparent</h4><p>Standard web</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-800w.png" download>⬇ Download</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-640w.png"></div><div class="decon-body"><h4>640w · transparent</h4><p>Email retina</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-640w.png" download>⬇ Download</a></div></div></div>
+    <div class="decon-card"><div class="decon-thumb dark"><img src="downloads/logos/lla-logo-400w.png"></div><div class="decon-body"><h4>400w · transparent</h4><p>Nav / footer</p><div class="decon-btns"><a class="chip primary" href="downloads/logos/lla-logo-400w.png" download>⬇ Download</a></div></div></div>
   </div>
 
-  <!-- Faculty photos -->
-  <h3 style="font-family:Georgia,serif;color:var(--navy);margin:32px 0 14px;font-size:22px">Faculty Portraits</h3>
+  <h3 class="sub">Faculty Portraits</h3>
   <div class="decon-grid">
     <div class="decon-card"><div class="decon-thumb"><img src="downloads/instructors/julie-gibson-clark.jpg"></div><div class="decon-body"><h4>Julie Gibson Clark</h4><p>Founding Faculty · #2 Rejuvenation Olympics</p><div class="decon-btns"><a class="chip primary" href="downloads/instructors/julie-gibson-clark.jpg" download>⬇ Download</a></div></div></div>
     <div class="decon-card"><div class="decon-thumb"><img src="downloads/instructors/natalie.jpg"></div><div class="decon-body"><h4>Natalie Blackbourne</h4><p>M.S. Emotional Intelligence</p><div class="decon-btns"><a class="chip primary" href="downloads/instructors/natalie.jpg" download>⬇ Download</a></div></div></div>
@@ -286,13 +280,8 @@
 
   <div class="divider"></div>
 
-  <!-- ===== FINAL: ALL IN ONE ZIP ===== -->
-  <div class="section-label" style="margin-top:56px">
-    <span class="num">3</span>
-    <h2>Everything In One File</h2>
-  </div>
-  <p class="section-desc">One ZIP containing every folder above: lp1-hero/, lp2-hero/, logos/, instructors/, emails-designed/, emails-text/, headers-footers/.</p>
-  <div style="text-align:center;padding:40px 0">
+  <div class="section-label" style="margin-top:56px"><span class="num">3</span><h2>Everything In One File</h2></div>
+  <div style="text-align:center;padding:20px 0 40px">
     <a class="btn dark" href="downloads/lla-campaign-v8.zip" download style="font-size:16px;padding:18px 34px">⬇ Download entire campaign · lla-campaign-v8.zip</a>
   </div>
 
