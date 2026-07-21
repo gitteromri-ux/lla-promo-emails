@@ -1,61 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to Longevity Life Academy — your personal invitation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Welcome to Longevity Life Academy</title>
 <style>
-  body { margin:0; padding:0; background:#FAF6EE; }
-  .yellow { background:#FFF3A6; padding:1px 3px; color:#1A2836; }
-  .cta {
-    display:inline-block; background:#5EB6FF; color:#0A1220 !important;
-    text-decoration:none; font-family:Arial,Helvetica,sans-serif;
-    font-weight:700; font-size:17px; padding:14px 30px; border-radius:6px;
-    letter-spacing:.2px;
-  }
-  @media only screen and (max-width:600px) {
-    .container { width:100% !important; }
-    .pad { padding:20px 22px !important; }
-    .cta { display:block !important; text-align:center; }
+  body{margin:0;padding:0;background:#F5F0E5;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#0A1220;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;background:#FFFFFF;border-radius:6px;overflow:hidden}
+  .top-navy{background:#0A1E3F;padding:36px 20px;text-align:center}
+  .top-navy img{display:inline-block;height:70px;width:auto;image-rendering:auto}
+  .divider{height:4px;background:#5EB6FF}
+  .alert{background:#0A1E3F;padding:18px 24px;text-align:center;color:#fff;font-size:14px;letter-spacing:.02em}
+  .alert b{color:#5EB6FF;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-right:10px}
+  .alert .sep{opacity:.5;margin:0 8px}
+  .body-inner{padding:44px 40px 32px}
+  h1{font-family:'Georgia',serif;font-weight:700;font-size:28px;line-height:1.2;color:#0A1220;margin:0 0 20px}
+  .accent{font-family:'Georgia',serif;font-style:italic;color:#5EB6FF;font-size:20px;margin:0 0 20px}
+  .dots{color:#5EB6FF;font-size:16px;letter-spacing:2px;margin:0 0 22px}
+  p{font-size:15px;line-height:1.65;color:#2a3244;margin:0 0 18px}
+  p b, p strong{color:#0A1220;font-weight:700}
+  .details{background:#F5F0E5;border-radius:8px;padding:22px 26px;margin:24px 0}
+  .details table{width:100%;border-collapse:collapse}
+  .details td{padding:8px 0;font-size:14px;vertical-align:top}
+  .details td.k{color:#7A8497;text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:600;width:38%}
+  .details td.v{color:#0A1220}
+  .details td.v b{font-weight:700}
+  .details .neon{color:#5EB6FF;font-weight:700}
+  .info-box{background:#F5F0E5;border-radius:8px;padding:18px 22px;margin:24px 0}
+  .info-box .label{color:#5EB6FF;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+  .info-box p{margin:0;font-size:14px;line-height:1.55}
+  .btn-row{text-align:center;padding:20px 0 8px}
+  .btn{display:inline-block;background:#5EB6FF;color:#0A1220 !important;text-decoration:none;font-weight:700;font-size:15px;padding:15px 36px;border-radius:999px;box-shadow:0 6px 18px rgba(94,182,255,.35)}
+  .signoff{margin-top:28px;font-size:14px;color:#2a3244;line-height:1.5}
+  .signoff b{color:#0A1220}
+  .hero-img{width:100%;display:block}
+  .footer{background:#0A1E3F;padding:32px 24px 20px;text-align:center;color:#B8C4DE}
+  .footer img{height:52px;width:auto;margin-bottom:14px}
+  .footer .tag{font-size:13px;color:#B8C4DE;margin:0 0 18px}
+  .footer hr{border:none;border-top:1px solid rgba(255,255,255,.12);margin:14px auto;max-width:220px}
+  .footer .fine{font-size:11px;line-height:1.5;color:#8494B4;padding:0 20px}
+  .footer .fine a{color:#8494B4;text-decoration:underline}
+  @media(max-width:520px){
+    .body-inner{padding:32px 24px 24px}
+    h1{font-size:24px}
+    .details td{display:block;width:100%}
+    .details td.k{padding-bottom:2px}
+    .details td.v{padding-bottom:14px}
   }
 </style>
 </head>
-<body style="margin:0;padding:0;background:#FAF6EE;">
-<div style="display:none;max-height:0;overflow:hidden;color:transparent;">You've been personally invited to join The Longevity Blueprint. A live 18-week course from Longevity Life Academy.</div>
+<body>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F0E5"><tr><td align="center" style="padding:24px 12px">
+<div class="wrap">
+  <div class="top-navy"><img src="../assets/images/lla-logo-exact.png" alt="Longevity Life Academy by eTeacher"></div>
+  <div class="divider"></div>
+  <div class="alert"><b>Personal Invitation</b><span class="sep">·</span>Class begins August 3</div>
+  <img class="hero-img" src="../assets/hero/lp1-cells-real.jpg" alt="Cellular biomarkers">
+  <div class="body-inner">
+    <h1>Welcome to Longevity Life Academy.</h1>
+    <div class="accent">Design the life ahead of you.</div><div class="dots">• • •</div>
+    
+<p>You have been personally invited to join the next class of <b>The Longevity Blueprint</b>, a live 18-session longevity course by Longevity Life Academy.</p>
+<p>A guided protocol built around <b>your biology, your numbers, and the daily practice</b> that turns the next decades into your strongest.</p>
+<p>As a warm welcome, you can reserve your seat with <b>35% off tuition</b>. Small class of 8 to 15.</p>
+<div class="info-box">
+  <div class="label">Included with the course</div>
+  <p><b>Free Abbott Lingo CGM by lesson 5.</b> Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access.</p>
+</div>
 
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#FAF6EE;">
-  <tr><td align="center" style="padding:28px 12px;">
-    <table role="presentation" class="container" width="560" cellspacing="0" cellpadding="0" border="0" style="width:560px;max-width:560px;background:#FFFFFF;">
-
-      <tr><td class="pad" style="padding:28px 34px 8px 34px;font-family:Georgia,serif;color:#1A2836;font-size:16px;line-height:1.55;">
-        <p style="margin:0 0 16px 0;">Hi Sandra,</p>
-
-        <p style="margin:0 0 16px 0;">Welcome to <span class="yellow">Longevity Life Academy</span>. You have been personally invited by one of our trusted teachers to begin a meaningful study of the science of a longer, stronger life.</p>
-
-        <p style="margin:0 0 16px 0;">This is more than just a course. It is a path to <b>confidence, clarity, and the daily discipline</b> that turns the next decades into your strongest. As a warm welcome, we are offering you <b>35% off tuition</b> ($1,650 → $1,073), and by lesson 5 we will send you a <b>free Abbott Lingo continuous glucose monitor</b> to track your own biology.</p>
-
-        <p style="margin:0 0 16px 0;">Learn from top longevity experts. Our founding faculty includes <b>Dr. Julie Gibson Clark</b>, #2 on the Rejuvenation Olympics, alongside Natalie Blackbourne, Courtney Donofrio and Amy Jamieson. Small class of 8 to 15.</p>
-
-        <p style="margin:0 0 20px 0;">Are you ready to start?</p>
-      </td></tr>
-
-      <tr><td align="center" class="pad" style="padding:0 34px 30px 34px;">
-        <a href="https://gitteromri-ux.github.io/lla-promo-emails/lp/" class="cta">Begin Your Study</a>
-      </td></tr>
-
-      <tr><td class="pad" style="padding:0 34px 28px 34px;font-family:Georgia,serif;color:#1A2836;font-size:14px;line-height:1.5;">
-        <p style="margin:0 0 6px 0;font-style:italic;">In good health,</p>
-        <p style="margin:0;"><span class="yellow">Longevity Life Academy</span></p>
-      </td></tr>
-
-    </table>
-    <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:560px;max-width:560px;">
-      <tr><td style="padding:14px 34px 24px 34px;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#6B7A8A;text-align:center;line-height:1.5;">
-        You received this because you subscribed at longevitylifeacademy.com<br>
-        <a href="#" style="color:#6B7A8A;">Unsubscribe</a> &nbsp;·&nbsp; <a href="#" style="color:#6B7A8A;">Update preferences</a>
-      </td></tr>
-    </table>
-  </td></tr>
-</table>
-</body>
-</html>
+    <div class="btn-row"><a class="btn" href="https://gitteromri-ux.github.io/lla-promo-emails/lp/dark.html">Reserve My Seat</a></div>
+    <div class="signoff">In good health,<br><b>Longevity Life Academy</b></div>
+  </div>
+  <div class="footer">
+    <img src="../assets/images/lla-logo-exact.png" alt="Longevity Life Academy by eTeacher">
+    <p class="tag">The Longevity Blueprint. Powered by eTeacher Group.</p>
+    <hr>
+    <p class="fine">You received this because you subscribed at longevitylifeacademy.com &nbsp;·&nbsp; <a href="#">Unsubscribe</a> &nbsp;·&nbsp; <a href="#">Update preferences</a></p>
+  </div>
+</div>
+</td></tr></table>
+</body></html>
