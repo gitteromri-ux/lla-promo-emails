@@ -24,6 +24,7 @@
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,30,.85) 0%,rgba(5,12,30,.55) 55%,rgba(5,12,30,.15) 100%)}
   .hero-inner{position:relative;max-width:1200px;margin:0 auto;padding:100px 24px 110px;display:grid;grid-template-columns:1fr}
   .hero-copy{max-width:640px}
+  .hero-wordmark{display:block;height:110px;width:auto;margin-bottom:28px;opacity:.98}
   .eyebrow{display:inline-block;padding:8px 18px;border:1px solid rgba(126,200,255,.35);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.14em;color:#7EC8FF;text-transform:uppercase;margin-bottom:22px}
   h1.hero-title{font-family:'Instrument Serif',Georgia,serif;font-weight:400;line-height:1.05;font-size:clamp(38px,5vw,64px);color:#fff;letter-spacing:-.01em}
   h1.hero-title em{font-style:italic;color:var(--neon);font-weight:400}
@@ -87,6 +88,7 @@
     .faculty{grid-template-columns:repeat(2,1fr)}
     footer .container{grid-template-columns:1fr}
     .nav-logo img{height:44px}
+    .hero-wordmark{height:72px;margin-bottom:20px}
     .nav-cta{padding:8px 16px;font-size:13px}
     h1.hero-title{font-size:34px}
   }
@@ -105,9 +107,10 @@
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="hero-copy">
+      <img class="hero-wordmark" src="../assets/images/lla-hero-wordmark-110h.png" alt="Longevity Life Academy by eTeacher">
       <span class="eyebrow">The Longevity Blueprint · Live Cohort</span>
-      <h1 class="hero-title">A live, 18-session <em>longevity</em> course, taught by physicians.</h1>
-      <p class="lede">Longevity Life Academy is a live, small-class program built on <strong>your biology, your numbers, and a daily practice</strong>. Six pillars. Four phases. Eighteen sessions with our faculty. Applications close for the class starting <strong>August 3</strong>.</p>
+      <h1 class="hero-title">The longevity course that turns the next decades into your <em>strongest</em>.</h1>
+      <p class="lede">A guided protocol built around <strong>your biology, your numbers, and the daily practice</strong> that turns the next decades into your strongest. Eighteen live sessions. Small class of 8 to 15. Cohort begins <strong>August 3</strong>.</p>
       <div class="hero-cta-row">
         <a href="#apply" class="btn-primary">Reserve My Seat →</a>
         <span class="hero-meta">Class of 8–15 · $1,650 → $1,073 with 35% off tuition</span>
