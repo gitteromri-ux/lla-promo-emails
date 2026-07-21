@@ -4,210 +4,252 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>The Longevity Blueprint · Longevity Life Academy</title>
-<meta name="description" content="Learn from top longevity experts. A structured 18-week live course by Longevity Life Academy. Free Abbott Lingo CGM included." />
+<meta name="description" content="Go deeper than your annual physical ever will. A guided 18-week longevity course built around your biology, your numbers, and the daily practice." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root{
-    --page:#E9F5EE;         /* mint page bg (matches reference emails) */
-    --card:#FFFFFF;
-    --box:#F5F1EA;           /* warm gray details box */
-    --ink:#1A2836;
-    --muted:#5B6B7A;
-    --teal:#2AB8B0;
-    --teal-dark:#1F8F88;
-    --yellow:#FFF3A6;
-    --line:#DFD6C4;
-    --gold:#C86B1A;
+    --navy:#0A1220;
+    --navy-2:#001F4D;
+    --ink:#0D1B2A;
+    --cream:#F5F0E5;
+    --cream-2:#FAF6EE;
+    --blue:#006EFF;
+    --blue-2:#338BFF;
+    --muted:#A0AEC0;
+    --line:rgba(255,255,255,.10);
+    --card:rgba(255,255,255,.04);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{overflow-x:hidden}
   body{
-    font-family:Georgia,'Cormorant Garamond',serif;
-    color:var(--ink); background:var(--page); line-height:1.6;
+    font-family:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;
+    color:#E7ECF3; background:var(--navy); line-height:1.55;
     font-size:17px;
+    -webkit-font-smoothing:antialiased;
   }
-  .sans{font-family:'Hanken Grotesk',Arial,Helvetica,sans-serif}
+  .serif{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;letter-spacing:-.005em}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  .yellow{background:var(--yellow);padding:1px 4px}
 
-  /* Top bar */
+  /* Top bar (matches live site) */
   .topbar{
-    background:#FFFFFF; border-bottom:1px solid var(--line);
-    padding:14px 24px; display:flex; align-items:center; justify-content:space-between;
-  }
-  .topbar .logo img{height:34px}
-  .topbar .phone{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:14px;color:var(--muted)}
-  .topbar .phone a{color:var(--ink);font-weight:600}
-
-  /* HERO with laptop-zoom image */
-  .hero{
-    background:var(--card);
+    background:rgba(10,18,32,.85); backdrop-filter:blur(20px);
+    padding:16px 28px; display:flex; align-items:center; justify-content:space-between;
+    position:sticky; top:0; z-index:50;
     border-bottom:1px solid var(--line);
   }
-  .hero-grid{
-    max-width:1180px; margin:0 auto;
-    display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch;
-  }
-  .hero-copy{padding:70px 48px 70px 48px; display:flex; flex-direction:column; justify-content:center}
-  .hero h1{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600; font-size:44px; line-height:1.12; margin:0 0 12px;
-    color:var(--ink);
-    letter-spacing:-.005em;
-  }
-  .hero h1 em{font-style:italic;color:var(--teal-dark)}
-  .hero .divider{
-    width:60px; height:6px; background:var(--teal); border-radius:3px;
-    margin:14px 0 22px 0;
-  }
-  .hero p.lead{font-size:17px; line-height:1.6; color:var(--ink); max-width:520px; margin:0 0 22px 0}
-  .hero p.lead b{font-weight:700}
-  .cta{
-    display:inline-block; background:var(--teal); color:#FFF;
-    font-family:'Hanken Grotesk',Arial,sans-serif; font-weight:700; font-size:17px;
-    padding:14px 30px; border-radius:6px; letter-spacing:.2px;
-    transition:background .15s;
-  }
-  .cta:hover{background:var(--teal-dark)}
-  .hero-img{
-    background:#F5F1EA;
-    background-image:url('../assets/images/woman-cards.jpg');
-    background-size:cover; background-position:center;
-    min-height:500px;
+  .topbar .logo img{height:36px}
+  .nav-cta{
+    background:#fff; color:var(--blue); padding:12px 22px;
+    border-radius:14px; font-weight:700; font-size:14px;
+    box-shadow:0 4px 18px rgba(0,110,255,.28);
   }
 
-  /* Trust band under hero */
+  /* HERO */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(0,110,255,.16) 0%, transparent 60%),
+      linear-gradient(180deg, #0A1220 0%, #060E1A 100%);
+    padding:70px 24px 90px 24px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:url('../assets/hero/lp1-cells.jpg');
+    background-size:cover; background-position:center right;
+    opacity:.38; mix-blend-mode:screen;
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative; z-index:2;
+    max-width:1160px; margin:0 auto;
+    display:grid; grid-template-columns:1.15fr 1fr; gap:60px; align-items:center;
+  }
+  .hero-copy{max-width:600px}
+  .eyebrow{
+    display:inline-block; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:#7EC8FF; font-weight:600; margin-bottom:22px;
+    padding:8px 14px; border:1px solid rgba(126,200,255,.28); border-radius:999px;
+  }
+  .hero h1{
+    font-family:'Instrument Serif',Georgia,serif; font-weight:400;
+    font-size:62px; line-height:1.02; margin:0 0 22px;
+    letter-spacing:-.012em; color:#fff;
+  }
+  .hero h1 i{color:#7EC8FF; font-style:italic}
+  .hero .lead{
+    font-size:18px; line-height:1.55; color:#C8D2E0; margin:0 0 30px 0; max-width:560px;
+  }
+  .hero .lead b{color:#fff;font-weight:600}
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:10px;
+    background:#fff; color:var(--blue);
+    padding:18px 40px; border-radius:14px;
+    font-weight:700; font-size:16px;
+    letter-spacing:-.01em;
+    box-shadow:0 8px 32px rgba(0,110,255,.4), 0 0 80px rgba(0,110,255,.15);
+    transition:transform .2s;
+    font-family:'Inter',sans-serif;
+  }
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-primary .arrow{width:18px;height:18px}
+
+  .hero-side{
+    background:url('../assets/hero/lp1-cells.jpg') center/cover no-repeat;
+    aspect-ratio:1/1; border-radius:20px;
+    box-shadow:0 30px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.06);
+    border:1px solid var(--line);
+  }
+
+  /* Trust band */
   .trust{
-    background:var(--card); border-bottom:1px solid var(--line);
+    background:rgba(255,255,255,.02); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
     padding:22px 24px;
   }
   .trust-inner{
-    max-width:1180px; margin:0 auto;
-    display:flex; align-items:center; justify-content:center; gap:36px;
-    font-family:'Hanken Grotesk',Arial,sans-serif; font-size:14px; color:var(--muted);
-    flex-wrap:wrap;
+    max-width:1160px; margin:0 auto;
+    display:flex; align-items:center; justify-content:center; gap:44px;
+    font-size:14px; color:var(--muted); flex-wrap:wrap;
   }
-  .trust b{color:var(--ink)}
-  .trust .stars{color:#F5A623; letter-spacing:1px}
+  .trust b{color:#fff;font-weight:600}
+  .trust .stars{color:#FFCC00; letter-spacing:1px}
 
   /* Sections */
-  section.band{padding:70px 24px;background:var(--page)}
-  section.band.white{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .wrap{max-width:1080px;margin:0 auto}
+  section.band{padding:90px 24px}
+  section.band.cream{background:var(--cream-2);color:var(--ink)}
+  section.band.cream .muted{color:#5B6B7A}
+  .wrap{max-width:1120px;margin:0 auto}
   h2.title{
-    font-family:'Cormorant Garamond',Georgia,serif;
-    font-weight:600; font-size:38px; line-height:1.15; letter-spacing:-.005em;
-    margin:0 0 14px 0; color:var(--ink); text-align:center;
+    font-family:'Instrument Serif',Georgia,serif; font-weight:400;
+    font-size:46px; line-height:1.1; letter-spacing:-.01em;
+    margin:0 0 14px 0; text-align:center;
   }
-  h2.title em{font-style:italic;color:var(--teal-dark)}
+  h2.title i{color:var(--blue); font-style:italic}
   p.sub{
-    text-align:center; max-width:720px; margin:0 auto 40px;
-    color:var(--muted); font-size:17px; line-height:1.6;
+    text-align:center; max-width:720px; margin:0 auto 48px;
+    color:var(--muted); font-size:17px; line-height:1.55;
   }
+  section.band.cream p.sub{color:#5B6B7A}
 
-  /* Pillars 3-col */
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  /* Pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .pillar{
-    background:var(--card); padding:26px 24px; border:1px solid var(--line);
-    border-radius:6px;
+    background:#fff; padding:28px 26px; border-radius:16px;
+    box-shadow:0 2px 12px rgba(10,18,32,.06);
+    border:1px solid rgba(10,18,32,.06);
   }
   .pillar .num{
-    font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--teal-dark);
-    font-weight:700; margin-bottom:6px;
+    font-family:'Instrument Serif',serif; font-size:26px; color:var(--blue);
+    font-weight:400; font-style:italic; margin-bottom:6px;
   }
-  .pillar h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin:0 0 8px 0;color:var(--ink)}
-  .pillar p{font-size:15px;line-height:1.55;color:var(--muted);margin:0}
+  .pillar h4{font-size:18px;font-weight:700;margin:0 0 8px 0;color:var(--ink);letter-spacing:-.01em}
+  .pillar p{font-size:14.5px;line-height:1.55;color:#5B6B7A;margin:0}
 
   /* CGM callout */
   .cgm-callout{
-    background:var(--box); border:1px solid var(--line); border-radius:6px;
-    padding:32px; display:grid; grid-template-columns:1.2fr 1fr; gap:28px; align-items:center;
+    background:#fff; border-radius:20px;
+    padding:44px; display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center;
+    box-shadow:0 8px 40px rgba(10,18,32,.08);
   }
-  .cgm-callout .eyebrow{
-    font-family:'Hanken Grotesk',Arial,sans-serif; font-weight:700; font-size:12px;
-    letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:10px;
+  .cgm-callout .kicker{
+    font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--blue); font-weight:700; margin-bottom:14px;
   }
   .cgm-callout h3{
-    font-family:'Cormorant Garamond',Georgia,serif; font-size:30px; font-weight:600;
-    color:var(--ink); margin:0 0 10px 0; line-height:1.15;
+    font-family:'Instrument Serif',serif; font-size:36px; font-weight:400;
+    color:var(--ink); margin:0 0 12px 0; line-height:1.1; letter-spacing:-.01em;
   }
-  .cgm-callout p{margin:0;color:var(--ink);font-size:16px;line-height:1.6}
-  .cgm-callout img{border-radius:6px}
+  .cgm-callout h3 i{color:var(--blue)}
+  .cgm-callout p{margin:0;color:#5B6B7A;font-size:15.5px;line-height:1.6}
+  .cgm-callout img{border-radius:12px}
 
   /* Teachers */
-  .teachers{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+  .teachers{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
   .teacher{
-    background:var(--card); border:1px solid var(--line); border-radius:6px;
-    padding:20px 18px; text-align:center;
+    background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:16px;
+    padding:24px 20px; text-align:center;
   }
-  .teacher img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 12px auto}
-  .teacher h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;margin:0 0 4px 0;color:var(--ink);line-height:1.2}
-  .teacher .role{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:11px;color:var(--teal-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;font-weight:600}
-  .teacher p{font-size:13px;line-height:1.5;color:var(--muted);margin:0}
+  .teacher img{width:112px;height:112px;border-radius:50%;object-fit:cover;margin:0 auto 14px auto;border:2px solid rgba(126,200,255,.15)}
+  .teacher h4{font-size:16.5px;font-weight:700;margin:0 0 4px 0;color:#fff;letter-spacing:-.005em;line-height:1.2}
+  .teacher .role{font-size:10.5px;color:#7EC8FF;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;font-weight:600}
+  .teacher p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
 
   /* Quotes */
   .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .quote{
-    background:var(--card); border-left:3px solid var(--teal); padding:24px 22px;
-    border-radius:0 6px 6px 0;
+    background:#fff; padding:28px 26px; border-radius:16px;
+    border:1px solid rgba(10,18,32,.06);
   }
-  .quote .stars{color:#F5A623;letter-spacing:2px;font-size:14px;margin-bottom:8px}
-  .quote p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;line-height:1.4;color:var(--ink);margin:0 0 10px 0}
-  .quote .cite{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:12px;color:var(--muted);letter-spacing:.04em}
+  .quote .stars{color:#FFCC00;letter-spacing:2px;font-size:15px;margin-bottom:12px}
+  .quote p{font-family:'Instrument Serif',serif;font-size:20px;font-style:italic;line-height:1.35;color:var(--ink);margin:0 0 12px 0;letter-spacing:-.005em}
+  .quote .cite{font-size:12px;color:#8B93A0;letter-spacing:.02em}
 
-  /* Apply form */
-  .apply-band{background:var(--card);padding:70px 24px;border-top:1px solid var(--line)}
-  .apply{max-width:720px;margin:0 auto;background:var(--box);border:1px solid var(--line);border-radius:6px;padding:44px}
-  .apply .eyebrow{
-    font-family:'Hanken Grotesk',Arial,sans-serif; font-weight:700; font-size:12px;
-    letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:10px; text-align:center;
-  }
-  .apply h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;text-align:center;color:var(--ink);margin:0 0 8px 0;line-height:1.2}
-  .apply .sub{text-align:center;color:var(--ink);font-size:15px;margin:0 0 26px 0}
+  /* Apply */
+  .apply-band{background:linear-gradient(180deg,#0A1220 0%,#001F4D 100%); padding:100px 24px}
+  .apply{max-width:760px;margin:0 auto;background:#fff;border-radius:20px;padding:50px;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+  .apply .kicker{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;text-align:center;margin-bottom:14px}
+  .apply h2{font-family:'Instrument Serif',serif;font-size:38px;font-weight:400;text-align:center;color:var(--ink);margin:0 0 8px 0;line-height:1.1;letter-spacing:-.01em}
+  .apply h2 i{color:var(--blue)}
+  .apply .sub{text-align:center;color:#5B6B7A;font-size:15.5px;margin:0 0 32px 0;line-height:1.55}
   .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .field label{display:block;font-family:'Hanken Grotesk',Arial,sans-serif;font-size:12px;color:var(--muted);margin-bottom:5px;font-weight:600;letter-spacing:.04em}
+  .field label{display:block;font-size:11.5px;color:#5B6B7A;margin-bottom:6px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
   .field input,.field select{
-    width:100%;padding:11px 12px;font-family:'Hanken Grotesk',Arial,sans-serif;font-size:14px;
-    border:1px solid var(--line);background:#FFF;color:var(--ink);border-radius:4px;
+    width:100%;padding:14px 14px;font-family:'Inter',sans-serif;font-size:14.5px;
+    border:1px solid #E1E5EA;background:#FAF6EE;color:var(--ink);border-radius:10px;
+    outline:none; transition:border-color .15s;
   }
-  .submit-row{margin-top:22px;text-align:center}
-  .submit-row .cta{padding:14px 40px}
-  .fine{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:11px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.5}
+  .field input:focus,.field select:focus{border-color:var(--blue)}
+  .submit-row{margin-top:26px;text-align:center}
+  .submit-row .btn-primary{padding:18px 48px}
+  .fine{font-size:11.5px;color:#8B93A0;text-align:center;margin-top:16px;line-height:1.5;max-width:520px;margin-left:auto;margin-right:auto}
 
   /* Footer */
-  footer{background:#FFFFFF;border-top:1px solid var(--line);padding:32px 24px;text-align:center}
-  footer p{font-family:'Hanken Grotesk',Arial,sans-serif;font-size:13px;color:var(--muted);margin:4px 0}
+  footer{background:var(--navy);border-top:1px solid var(--line);padding:36px 24px;text-align:center}
+  footer p{font-size:13px;color:var(--muted);margin:4px 0}
+  footer b{color:#fff}
 
-  /* Sticky bottom bar */
+  /* Sticky bottom */
   .gtm{
     position:fixed;bottom:0;left:0;right:0;z-index:40;
-    background:var(--ink);color:#FFF;
-    padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:18px;
-    font-family:'Hanken Grotesk',Arial,sans-serif;font-size:14px;
+    background:rgba(10,18,32,.96); backdrop-filter:blur(20px);
+    border-top:1px solid var(--line);
+    padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:22px;
+    font-size:14.5px; color:#E7ECF3;
   }
-  .gtm b{color:#FFE39A}
-  .gtm .cta{padding:9px 20px;font-size:14px}
+  .gtm b{color:#FFCC00}
+  .gtm .btn-primary{padding:11px 22px;font-size:13.5px;box-shadow:0 4px 18px rgba(0,110,255,.35)}
 
+  /* MOBILE */
   @media (max-width:960px){
-    .hero-grid{grid-template-columns:1fr}
-    .hero-copy{padding:44px 24px 30px 24px}
-    .hero-img{min-height:280px}
-    .hero h1{font-size:34px}
+    .hero{padding:48px 20px 60px 20px}
+    .hero-inner{grid-template-columns:1fr;gap:36px}
+    .hero-side{aspect-ratio:16/10;order:-1;max-height:280px}
+    .hero h1{font-size:40px}
+    .hero .lead{font-size:16px}
     .pillars,.teachers,.quotes{grid-template-columns:repeat(2,1fr)}
-    .teachers{grid-template-columns:repeat(2,1fr)}
-    .cgm-callout{grid-template-columns:1fr}
+    .cgm-callout{grid-template-columns:1fr;padding:32px 24px;gap:24px}
+    .cgm-callout h3{font-size:28px}
     .form-grid{grid-template-columns:1fr}
-    h2.title{font-size:30px}
-    section.band{padding:50px 20px}
+    h2.title{font-size:34px}
+    section.band{padding:60px 20px}
+    .apply-band{padding:60px 20px}
+    .apply{padding:32px 22px}
+    .apply h2{font-size:30px}
+    .trust-inner{gap:16px;font-size:13px}
   }
   @media (max-width:520px){
+    .hero h1{font-size:32px}
     .pillars,.teachers,.quotes{grid-template-columns:1fr}
-    .trust-inner{gap:14px;font-size:13px}
-    .gtm{flex-direction:column;gap:8px;padding:10px 16px}
-    .apply{padding:28px 20px}
+    .gtm{flex-direction:column;gap:10px;padding:12px 16px}
+    .gtm .btn-primary{width:100%;justify-content:center}
+    .topbar{padding:14px 18px}
+    .topbar .logo img{height:30px}
+    .nav-cta{padding:9px 16px;font-size:12.5px}
+    .btn-primary{padding:16px 30px;font-size:15px}
   }
 </style>
 </head>
@@ -215,28 +257,27 @@
 
 <div class="topbar">
   <div class="logo"><img src="../assets/images/lla-logo-official.png" alt="Longevity Life Academy" /></div>
-  <div class="phone"><a href="#apply">Speak to admissions</a></div>
+  <a href="#apply" class="nav-cta">Reserve My Seat</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-grid">
+  <div class="hero-inner">
     <div class="hero-copy">
-      <h1>The <em>Longevity Blueprint</em>.<br>The science of a longer, stronger life.</h1>
-      <div class="divider"></div>
-      <p class="lead">A structured 18-week live course by Longevity Life Academy. Read your body's signals, build your personal protocol, and turn the next decades into your strongest. Taught live by <b>Dr. Julie Gibson Clark</b>, #2 on the Rejuvenation Olympics, and our founding faculty.</p>
-      <p class="lead">Only <b>3 seats remain</b> in the next group. Reserved applicants receive <b class="yellow">35% off tuition</b> ($1,650 &rarr; $1,073), and a <b>free Abbott Lingo CGM by lesson 5</b>.</p>
-      <div><a href="#apply" class="cta">Approve My Voucher</a></div>
+      <span class="eyebrow">The Longevity Course &middot; Live Cohort</span>
+      <h1>Go deeper than your <i>annual physical</i> ever will.</h1>
+      <p class="lead">The longevity course. A guided protocol built around <b>your biology, your numbers, and the daily practice</b> that turns the next decades into your strongest. Applications are open for the next class.</p>
+      <a href="#apply" class="btn-primary">Reserve My Seat <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="hero-img" role="img" aria-label="Student learning longevity science on a live video lesson"></div>
+    <div class="hero-side" role="img" aria-label="A guided longevity protocol built on your biology"></div>
   </div>
 </section>
 
-<!-- TRUST BAND -->
+<!-- TRUST -->
 <div class="trust">
   <div class="trust-inner">
-    <div><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>Excellent</b> on Trustpilot &middot; 600+ verified reviews</div>
-    <div><b>400k+</b> students globally</div>
+    <div><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b>Excellent</b> on Trustpilot &middot; 600+ reviews</div>
+    <div><b>400k+</b> students</div>
     <div><b>197</b> countries</div>
     <div><b>25 yrs</b> online education</div>
     <div><b>Live</b> format</div>
@@ -244,9 +285,9 @@
 </div>
 
 <!-- PILLARS -->
-<section class="band">
+<section class="band cream">
   <div class="wrap">
-    <h2 class="title">Six pillars. <em>One measurable longevity course.</em></h2>
+    <h2 class="title">Six pillars. <i>One measurable longevity course.</i></h2>
     <p class="sub">Every session translates the science of a longer, stronger life into a decision you can act on that same week.</p>
     <div class="pillars">
       <div class="pillar"><div class="num">01</div><h4>Metabolic health</h4><p>CGM data, glucose response, and daily rhythm you can measure.</p></div>
@@ -259,14 +300,14 @@
   </div>
 </section>
 
-<!-- CGM CALLOUT -->
-<section class="band white">
+<!-- CGM -->
+<section class="band cream" style="padding-top:0">
   <div class="wrap">
     <div class="cgm-callout">
       <div>
-        <div class="eyebrow">Included with the course</div>
-        <h3>Free Abbott Lingo <em style="font-style:italic;color:var(--teal-dark)">CGM</em> by lesson 5.</h3>
-        <p>Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
+        <div class="kicker">Included with the course</div>
+        <h3>Free Abbott Lingo <i>CGM</i> by lesson 5.</h3>
+        <p>Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access. Track your body's real-time response to food, sleep, and movement, so every lesson lands on data you can see.</p>
       </div>
       <div><img src="../assets/images/lingo-cgm.jpg" alt="Abbott Lingo continuous glucose monitor" style="width:100%;height:auto" /></div>
     </div>
@@ -276,26 +317,26 @@
 <!-- TEACHERS -->
 <section class="band">
   <div class="wrap">
-    <h2 class="title"><em>Learn from top longevity experts.</em></h2>
+    <h2 class="title" style="color:#fff">Learn from <i>top longevity experts.</i></h2>
     <p class="sub">A faculty of certified specialists, researchers, and protocol designers backed by the most recognized credentialing bodies in the field.</p>
     <div class="teachers">
       <div class="teacher">
         <img src="../assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark" />
         <h4>Julie Gibson Clark</h4>
-        <div class="role">Founding Faculty &middot; #2 Rejuvenation Olympics</div>
-        <p>#2 slowest-aging person in the world. A leading voice in accessible, evidence-based longevity.</p>
+        <div class="role">Founding Faculty</div>
+        <p>#2 slowest-aging person in the world on the Rejuvenation Olympics. A leading voice in accessible, evidence-based longevity.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/natalie.jpg" alt="Natalie Blackbourne" />
         <h4>Natalie Blackbourne</h4>
         <div class="role">Longevity Researcher</div>
-        <p>M.S. Emotional Intelligence. ~20 years in health, neuroscience and cognitive optimization.</p>
+        <p>M.S. Emotional Intelligence. ~20 years in health, neuroscience, and cognitive optimization.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/courtney.jpg" alt="Courtney Donofrio" />
         <h4>Courtney Donofrio</h4>
-        <div class="role">Integrative Nutrition Coach</div>
-        <p>IIN-certified. Gut health, hormone balance, and practical biohacking from Amsterdam.</p>
+        <div class="role">Integrative Nutrition</div>
+        <p>IIN-certified. Gut health, hormone balance, practical biohacking from Amsterdam.</p>
       </div>
       <div class="teacher">
         <img src="../assets/instructors/amy.jpg" alt="Amy Jamieson" />
@@ -314,10 +355,10 @@
 </section>
 
 <!-- QUOTES -->
-<section class="band white">
+<section class="band cream">
   <div class="wrap">
-    <h2 class="title">Rated <em>Excellent</em> on Trustpilot by our students.</h2>
-    <p class="sub">Real, verified student voices from the Academy.</p>
+    <h2 class="title">Rated <i>Excellent</i> on Trustpilot.</h2>
+    <p class="sub">Real, verified student voices from Longevity Life Academy.</p>
     <div class="quotes">
       <div class="quote">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -341,9 +382,9 @@
 <!-- APPLY -->
 <section class="apply-band" id="apply">
   <div class="apply">
-    <div class="eyebrow">Reserve Your Seat</div>
-    <h2>Approve your 35% off tuition.</h2>
-    <p class="sub">Full course tuition <b>$1,650</b>. Reserved seats receive <b class="yellow">35% off &mdash; $1,073 all in</b>, or <b>$360/month</b>. Small classes of 8&ndash;15 fill fast.</p>
+    <div class="kicker">Reserve Your Seat &middot; 3 seats remaining</div>
+    <h2>Approve your <i>35% off tuition</i>.</h2>
+    <p class="sub">Full course tuition <b>$1,650</b>. Reserved seats receive <b>35% off &mdash; $1,073 all in</b>, or <b>$360/month</b>. Small classes of 8&ndash;15 fill fast.</p>
     <form onsubmit="event.preventDefault();alert('Thank you. An admissions advisor will reach out within one business day.');">
       <div class="form-grid">
         <div class="field"><label>First name</label><input type="text" required placeholder="Sandra" /></div>
@@ -366,7 +407,7 @@
         </div>
       </div>
       <div class="submit-row">
-        <button type="submit" class="cta">Approve My Voucher</button>
+        <button type="submit" class="btn-primary">Approve My Voucher <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
         <div class="fine">By submitting you agree to receive follow-up from Longevity Life Academy admissions. We keep your data private and never share it with third parties.</div>
       </div>
     </form>
@@ -380,7 +421,7 @@
 
 <div class="gtm">
   <div>Applications close soon &middot; <b>35% off tuition &middot; $1,650 &rarr; $1,073</b></div>
-  <a href="#apply" class="cta">Approve My Voucher</a>
+  <a href="#apply" class="btn-primary">Reserve My Seat</a>
 </div>
 
 </body>
