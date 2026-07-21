@@ -59,9 +59,9 @@
   .faculty{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
   .faculty figure{background:#fff;border:1px solid #E4DECB;border-radius:16px;padding:16px;text-align:center;color:var(--ink)}
   .faculty img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;display:block;margin-bottom:12px}
-  .faculty figcaption{font-size:13px;line-height:1.4;color:#4a5468}
-  .faculty figcaption strong{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
-  .faculty .founding{color:var(--blue);font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:2px}
+  .faculty figcaption{font-size:13px;line-height:1.5;color:#4a5468;text-align:left}
+  .faculty figcaption strong{display:block;color:var(--ink);font-size:15px;margin-bottom:4px;text-align:center}
+  .faculty .founding{color:var(--blue);font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;display:block;margin:0 auto 8px;text-align:center}
 
   .cgm-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
   .cgm-row img{width:100%;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
@@ -119,6 +119,15 @@
   </div>
 </section>
 
+
+<section class="promo-strip">
+  <div class="promo-strip-inner">
+    <div class="promo-left"><b>35% off tuition · Founder's pricing</b><br>Class of 8–15 · Cohort begins <b>August 3</b> · Applications close in 48 hours</div>
+    <div class="promo-price"><s>$1,650</s> $1,073</div>
+    <a href="#apply" class="promo-cta">Claim 35% Now →</a>
+  </div>
+</section>
+
 <div class="trust">
   <div class="container trust-inner">
     <span><span class="stars">★★★★★</span> <strong>Excellent</strong> on Trustpilot · 600+ reviews</span>
@@ -154,13 +163,25 @@
     <p class="lead" style="color:#c8d3ea">Physicians and clinicians who practice longevity medicine, publish, and coach.</p>
     <div class="faculty">
       <figure>
-        <img src="../assets/instructors/julie-gibson-clark.jpg" alt="Dr. Julie Gibson Clark">
-        <figcaption><strong>Dr. Julie Gibson Clark</strong><span class="founding">Founding Faculty</span>#2, Rejuvenation Olympics</figcaption>
+        <img src="../assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark">
+        <figcaption><strong>Julie Gibson Clark</strong><span class="founding">Founding Faculty</span>#2 slowest-aging person in the world on the Rejuvenation Olympics. A leading voice in accessible, evidence-based longevity, and Founding Faculty at Longevity Life Academy.</figcaption>
       </figure>
-      <figure><img src="../assets/instructors/natalie.jpg" alt="Natalie Blackbourne"><figcaption><strong>Natalie Blackbourne</strong>Metabolic Health</figcaption></figure>
-      <figure><img src="../assets/instructors/courtney.jpg" alt="Courtney Donofrio"><figcaption><strong>Courtney Donofrio</strong>Sleep & Recovery</figcaption></figure>
-      <figure><img src="../assets/instructors/amy.jpg" alt="Amy Jamieson"><figcaption><strong>Amy Jamieson</strong>Nutrition</figcaption></figure>
-      <figure><img src="../assets/instructors/jordan.jpg" alt="Jordan Lattimore"><figcaption><strong>Jordan Lattimore</strong>Exercise Science</figcaption></figure>
+      <figure>
+        <img src="../assets/instructors/natalie.jpg" alt="Natalie Blackbourne">
+        <figcaption><strong>Natalie Blackbourne</strong>M.S. Emotional Intelligence with ~20 years in health and wellness. Focuses on neuroscience and cognitive optimization for long-term vitality.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/instructors/courtney.jpg" alt="Courtney Donofrio">
+        <figcaption><strong>Courtney Donofrio</strong>IIN-certified founder of EatBiohackLove, based in Amsterdam. Specializes in gut health, hormone balance, and practical biohacking.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/instructors/amy.jpg" alt="Amy Jamieson">
+        <figcaption><strong>Amy Jamieson</strong>M.S. Health Science & Kinesiology, NASM CPT/CES, ACE Health Coach. 25+ years in higher education and a master competitive runner.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/instructors/jordan.jpg" alt="Jordan Lattimore">
+        <figcaption><strong>Jordan Lattimore</strong>B.Sc. Psychology, University of Alberta. 12 years in Costa Rica near the Nicoya Blue Zone, 5+ years in behavioral therapy.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -184,7 +205,7 @@
     <div class="pricing-card">
       <div class="price-old">$1,650</div>
       <div class="price-new">$1,073</div>
-      <div class="price-note">One payment · or $360/month · 35% off tuition · applications close in 48 hours</div>
+      <div class="price-note">Or $360/month · 35% off tuition · applications close in 48 hours</div>
       <a href="#" class="btn-primary" style="margin-top:24px">Reserve My Seat →</a>
     </div>
   </div>
@@ -212,5 +233,6 @@
     <div class="fine">© 2026 Longevity Life Academy by eTeacher Group · All rights reserved · Trustpilot rating verified · Excellent 600+ reviews</div>
   </div>
 </footer>
+<a href="#apply" class="fab"><span class="dot"></span>Claim 35% Off Now</a>
 </body>
 </html>
